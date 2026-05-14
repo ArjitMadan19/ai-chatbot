@@ -1,0 +1,1208 @@
+EX-10.1 2 apptech_ex1001.htm MASTER SERVICES AND DEVELOPMENT AGREEMENT
+Exhibit 10.1
+
+
+
+CONFIDENTIAL TREATMENT – REDACTED COPY
+*** PURSUANT TO SECURITIES AND EXCHANGE COMMISSION REGULATIONS, CERTAIN INFORMATION IN THIS EXHIBIT HAS BEEN OMITTED AS NONMATERIAL AND LIKELY TO CAUSE COMPETITIVE HARM IF PUBLICLY DISCLOSED.
+
+
+
+Master Services and Development Agreement
+
+
+
+This Master Services and Development Agreement (this “Agreement”), effective as of June 18, 2023 (the “Effective Date”), is by and between AppTech Payments Corporation, a Delaware corporation, whose principal offices are located at 5876 Owens Avenue, Suite 100, Carlsbad, CA., 92008 (“AppTech”), and Instacash, Inc., whose principal offices are located at 10926 David Taylor Drive, Suite 120 , Charlotte, North Carolina 28262 (“Customer”). Each of the parties may be referred to individually as a “Party” and collectively as the “Parties.
+
+
+
+WHEREAS, AppTech provides the AppTech Services (as defined herein) and Customer intends to subscribe to the AppTech Services; and
+
+
+
+WHEREAS, this Agreement establishes the platform services relationship and allocation of responsibilities regarding the AppTech Services;
+
+
+
+NOW, THEREFORE, in consideration of the mutual covenants, terms, and conditions set forth herein, and for other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the Parties agree as follows:
+
+
+
+1.	Certain Definitions.
+
+
+A.            “Terms & Conditions” or “Ts&Cs” means and shall refer to AppTech’s latest set of terms as updated from time to time and available upon request.
+
+
+
+B.            “Affiliates” means and shall refer to, in respect to a party to this Agreement, any company or entity controlled by, controlling or under common control with such party. For this purpose, a party is deemed to “control” a company or entity if it (i) owns, directly or indirectly, at least 50 percent of the capital of the other company, or (ii) in the absence of such ownership interest, substantially has the power to direct or cause the direction of the management and set the policies of such company or entity, whether through the ownership of voting securities or other ownership interests, by contract or otherwise.
+
+
+
+C.            “Analytical Results” means and shall refer to any proprietary data provided by AppTech to Customer through the AppTech Services (excluding Customer Data), which include without limit the results for Customer of AppTech’s proprietary modeling and analysis of Customer Data alone or in combination with other data in the AppTech Services, and/or Customer-configurable aggregated insights and reporting delivered through the AppTech Services.
+
+
+
+D.            “API Data” means any data that Customer sends, submits or uploads to the AppTech Services (whether directly or via a Customer Provider) through the application programming interfaces, sFTP file exchange, webhooks, or AppTech Services management consoles, as applicable.
+
+
+
+E.             “Applicable Laws” means all laws, rules, and regulations in any jurisdiction in which AppTech operates or provides related to the AppTech Services, including but not limited to those relating to privacy, data protection, and data security.
+
+
+
+F.             “AppTech Platform” or “Platform” has the meaning set forth in the AppTech Platform and Services Overview attached hereto as Exhibit D.
+
+
+
+G.            “AppTech Privacy Policy” means and shall refer to AppTech’s publicly facing service privacy policy located at https://apptechcorp.com/privacy-policy/or such successor URL, which AppTech may update from time to time.
+
+
+
+
+
+
+
+ 	1
+
+
+
+
+H.            “AppTech Services” means and shall refer to a suite of SaaS based digital BaaS, PaaS and CXS products that enable Customers to conduct Banking as a Service, Payments as a Service and Commerce Experiences as a Service. The specific AppTech Services selected by Customer are identified on the applicable Order Form/Exhibit Addenda agreed upon between the Parties pursuant to the terms of this Agreement.
+
+
+
+I.              “AppTech Technologies” shall mean and refer to without limit the Software (as defined in Section 2B below), Platform, Documentation, and Reporting Results.
+
+
+
+J.               “Authorized User” means and shall refer to an individual who is authorized by Customer to use the AppTech Services under Customer’s account, and who has been supplied a user identification and password by Customer. Authorized Users may include, for example, Customer’s (or Customer’s Clients, if applicable) employees, consultants, contractors and agents, and third parties with which Customer transacts business.
+
+
+
+K.            “Customer Data” means and shall refer to the: (i) API Data; and (ii) Website Data. To the extent Customer is using the AppTech Services for the benefit of its Clients pursuant to Section 2(E), “Customer Data” includes any data Customer submits, uploads, or otherwise sends to AppTech on behalf of its Clients.
+
+
+
+L.             “Customer Properties” means and shall refer to Customer’s services and digital applications or properties (e.g., webpages, apps, endpoints, platforms) that Customer integrates with the AppTech Services. To the extent Customer is using the AppTech Services for the benefit of its Clients pursuant to Section 2(E), “Customer Properties” includes any Client services and digital applications or properties (e.g., webpages, apps, endpoints) from which Customer Data is collected and submitted, uploaded, or otherwise sent to AppTech.
+
+
+
+M.            “Customer Provider” means and shall refer to any third-party application, platform or service utilized by Customer in connection with its business.
+
+
+
+N.            “Dispute Record” means and shall refer to an aggregated record of Customer Data relating to a chargeback and related analysis provided by AppTech to Customer via the AppTech Services.
+
+
+
+O.            “Documentation” means and shall refer to AppTech’s documentation, user guides and policies, as updated from time-to-time, including those accessible vis-a-vis the AppTech website or such successor site or URL, or otherwise provided by AppTech to its Customers in connection with the AppTech Services.
+
+
+
+P.             "End User" means and shall refer to an end user of a Customer Property.
+
+
+
+Q.            “Intellectual Property Rights” means all or any of the following: (a) patents, patent disclosures and inventions (whether patentable or not); (b) trademarks, service marks, trade dress, trade names, logos, corporate names and domain names, together with all of the goodwill associated therewith; (c) copyrights and copyrightable works (including computer programs), mask works and rights in data and databases; (d) trade secrets, know-how and other confidential information; and (e) all other intellectual property rights, in each case whether registered or unregistered and including all applications for, and renewals or extensions of, such rights, and all similar or equivalent rights or forms of protection provided by Applicable Law in any jurisdiction throughout the world.
+
+
+
+R.            “Order Form” means and shall refer to an ordering document (including any online order form), specifying the AppTech Services to be provided by AppTech, that is entered into between Customer and AppTech and incorporates the terms of this Agreement by reference.
+
+
+
+S.             “Pass-Through Terms” means and shall refer to the terms set forth in the Client Pass-Through Addendum attached as Exhibit C here-to this Agreement.
+
+
+
+
+
+
+
+ 	2
+
+
+
+
+T.             “Reporting Result” means transaction volume, dollar amounts, voided transactions, refunds, number of users, and transaction per customer and per merchant.
+
+
+
+U.            "Sensitive Personal Information" means and shall refer to for the purposes of this Agreement (i) full credit or debit card numbers or financial account information; Social Security numbers or local equivalents; passport numbers; driver’s license numbers or similar identifiers; passwords; the Payment Card Industry Data Security Standards (“PCI-DSS”), and other applicable regulations, laws or industry standards designed to protect similar sensitive information; (ii) information related to children under the age of 13 (or in the EEA, UK or Switzerland under 16); (iii) any information defined under the EU General Data Protection Regulation 2016/679 as a “special category” of personal data; and (iv) any other information AppTech reasonably determines is sensitive, provided AppTech communicates such determination to Customer.
+
+
+
+V.               "Website Data" means and shall refer to data collected from an End User's and/or Customer’s Client’s device through inputs placed on Customer Properties, which may include device identifiers and device information (e.g., page URL, referrer, number of fonts, OS) and other technical information pre-determined by AppTech.
+
+
+
+2.	AppTech Services and Software Development.
+
+
+A.            Provision of AppTech Services. AppTech will make the AppTech Services purchased under an Order Form/Exhibit Addenda available to Customer in accordance with the terms of this Agreement, including the Service Level Agreement attached hereto as Exhibit A, the California Data Processing Addendum attached hereto as Exhibit B, and the AppTech Approach to Technical Support attached hereto as Exhibit E. If Customer is using the AppTech Services for the benefit of its Clients pursuant to Section 2(E), the Pass-Through Terms will be attached hereto as Exhibit C (and collectively all Exhibits hereto shall be referred to as the “Strategic Partner Agreements.”) This includes the right to implement the Software on Customer Properties as part of its authorized use of the AppTech Services, as further described in Section 2(B).
+
+
+
+B.            Deployment of AppTech Platform and Software. AppTech will provide Customer, as applicable, the: (i) application programming interfaces (the “API”); and (ii) SDKs or other technologies, including any updates thereto (collectively, the “Software”), to enable Customer (or its Clients) to send AppTech the Customer Data and access and implement the AppTech Services, including in connection with Customer Properties. Customer will implement the Software in accordance with the Documentation and AppTech’s instructions and acknowledges that failure to do so may cause the AppTech Services to cease working properly. Through the API and AppTech Services console, Customer (or Customer’s Clients) will submit API Data, and AppTech will collect data, as applicable and as authorized by Customer. Customer will promptly remove (or cause all applicable Clients to remove) all integrations from Customer Properties upon termination of this Agreement and acknowledges that the integrations will continue to collect Data until so disabled or removed.
+
+
+
+C.            Third Party Services. In some circumstances, Customer may (i) integrate with the AppTech Services through an approved third-party application or marketplace via an extension or connector (“Marketplace”), (ii) authorize AppTech to connect the AppTech Services to Customer Providers to receive or send Customer Data or Analytical Results; and/or (iii) elect to use certain AppTech Services product features that incorporate the services or products of a third party (“AppTech Provider”, and with Marketplace and Customer Provider collectively referred to herein as “Third Party Service Providers.”) Customer acknowledges and agrees that (a) the services of such Marketplaces and Customer Providers do not form part of the AppTech Services and (b) the Marketplaces and Customer Providers are service providers of Customer and not AppTech. Customer’s use of the Marketplace or Customer Providers in connection with the AppTech Services may be subject to a separate written agreement between Customer and AppTech which may include, without limit, additional fees, dues and assessments charged by 3rd Party Service Providers, in addition to fees as defined below to AppTech that would be passed through to Customer. In addition, if Customer wishes to use the AppTech Services’ product features that incorporate the services of a AppTech Provider, to the extent the AppTech Provider requires Customer to agree to their terms of service, Customer agrees to do so. If the pricing of any AppTech Provider changes, AppTech may adjust its pricing to reflect that changed pricing for the AppTech Provider. APPTECH DISCLAIMS ALL LIABILITY AND RESPONSIBILITY FOR ANY THIRD-PARTY SERVICE PROVIDER AND/OR FOR THE ACTS OR OMISSIONS OF SUCH THIRD-PARTY SERVICE PROVIDER.
+
+
+
+
+
+
+
+ 	3
+
+
+
+
+D.            Non-compliance. Subject to obligations of confidentiality and policies on disclosure of information, where a party has a concern that the other party has not complied with the terms herein, the Parties agree to exchange information to ascertain the cause of such non-compliance and take reasonable steps to remediate such non- compliance.
+
+
+
+E.             Clients. If Customer is entering into this Agreement and using the AppTech Services for the benefit of its clients (each, a “Client”), Customer agrees to, prior to any such use of the AppTech Platform and Services, enter into and maintain a written agreement with each Client that binds each Client with respect to all Pass-Through Terms. Customer further represents, warrants, and covenants that, in addition to the obligations set forth in Exhibit C hereto, each such agreement will contain data protection terms that comply with applicable data protection laws and, a California Data Processing Addendum that complies with the CCPA (as defined in Exhibit B). Each California Data Processing Addendum will appoint Customer as a service provider on behalf of the Client. Customer acknowledges and agrees that, as between the parties, it is solely responsible for and will be liable for: (i) the actions or omissions of any Client in connection with the AppTech Services and (ii) for ensuring compliance with this Agreement by such Clients. Any breach or violation of this Agreement by a Client will be deemed a breach of this Agreement by Customer.
+
+
+
+F.             Software Development.
+
+
+
+i.        In General. Pursuant to the terms and conditions of this Agreement, AppTech will design and develop the software as agreed upon by the Parties herein (the “Development Services”) and described in the statement of work schedule attached hereto as Exhibit F (“SOW”), including any future SOWs delivered pursuant to Section 2.2 below. The Parties may mutually agree to modify the SOW from time to time during the Term. The SOW shall set forth: (i) a description of the software and deliverables (collectively, “Deliverables”) to be furnished by AppTech, (ii) the fees to be paid by Customer for the Development Services and Deliverables, (iii) such additional terms and conditions as may be mutually agreed upon by the Parties. To the extent there are any conflicts or inconsistencies between this Agreement and any SOW, the SOW shall govern and control.
+
+
+
+ii.       Additional SOW. Additional SOWs may be entered into under this Agreement by the Parties. A SOW shall become effective only when duly signed by the Parties and shall continue in effect through the date of termination specified in the SOW or, if not specified, the date the Deliverables have been completed in accordance with the terms of the applicable SOW. Each SOW shall act as an addendum to this Agreement and shall incorporate by reference the provisions of this Agreement as though such provisions were set forth therein in their entirety.
+
+
+
+iii.       Acceptance Test. After a Deliverable has been furnished to Customer, Customer will be entitled to test the Deliverable to determine if it operates in accordance with, and otherwise conforms to specifications in the applicable SOW. If the period or procedures for the acceptance test are not specified on the SOW, then (i) Customer will have fifteen (15) days from the date the Deliverable is received by Customer to conduct the test (the “Testing Period”), and (ii) Customer may use its own internal test procedures. A Deliverable shall be deemed to have been accepted at the end of the applicable Testing Period if Customer does not notify AppTech otherwise within three (3) days after the end of the Testing Period.
+
+
+
+iv.       Acceptance or Rejection. A Deliverable will be deemed to be accepted by Customer if (i) Customer notifies AppTech in writing that Customer accepts the Deliverable or (ii) Customer does not deliver a Rejection Notice (defined below) to AppTech prior to the end of the Testing Period. If Customer determines that a Deliverable does not operate in accordance with, or otherwise conform to, the specifications in the applicable Work, then Customer will provide AppTech with a written notice describing the defect in the Deliverable in sufficient detail (the “Rejection Notice”) to allow AppTech to reproduce such defect. AppTech will have thirty (30) days (or such other period as may be set forth in the applicable SOW) from the date it receives Customer’s Rejection Notice to correct the Deliverable at no additional cost to Customer. If AppTech redelivers a Deliverable, then Customer will be entitled to repeat the testing process. If AppTech fails to correct the defect of such Deliverable (through no fault of Customer) three times or more, then Customer may reject the Deliverable and terminate the applicable SOW (in whole or in part) upon written notice to AppTech, without financial liability or obligation for the portion terminated. If AppTech and Customer disagree on whether the Deliverable conforms to the specifications in the applicable SOW, the Parties agree to use reasonably commercial efforts to resolve such disagreement within thirty (30) days and if Parties fail to resolve such disagreement, the Parties resolve the disagreement through arbitration as set forth in Section 12I below.
+
+
+
+
+
+
+
+ 	4
+
+
+
+
+v.       Project Completion. A SOW shall be deemed to have been successfully completed upon Customer’s acceptance of all Deliverables, as specified in Sections 2Fiii and 2Fiv above, related to such SOW.
+
+
+
+vi.       Project Schedule; Changes. Each SOW will set forth the projected work effort and schedule applicable to the Development Services and Deliverables. All statements and agreements concerning time are good faith estimates based upon information available and circumstances existing at the time made, and each SOW is subject to equitable adjustment upon any material change in such information or circumstances, the occurrence of an excusable delay (as provided for in Section 2Fvii hereof) or upon modification of the scope, timing or level of work to be performed by AppTech. Either Party will be entitled to propose changes. It is mutually acknowledged that any such change may affect the fees or charges payable to AppTech and/or the project schedule. Neither Party shall have any obligation respecting any change until an appropriate change order or amendment to the applicable SOW is executed by the authorized representatives and delivered by both Parties.
+
+
+
+vii.       Excusable Delays and Failures. AppTech will be excused from delays in performing, or from a failure to perform, hereunder to the extent that such delays or failures result from causes beyond AppTech's reasonable control. In such event, the performance times shall be extended for a period of time equivalent to the time lost because of the excusable delay. Without limiting the generality of the foregoing, Customer acknowledges that Customer’s failure or delay in furnishing necessary information, equipment or access to facilities, delays or failure by Customer in completing tasks required of Customer or in otherwise performing Customer’s obligations hereunder or under any SOW and any assumption contained in a SOW which is untrue or incorrect will be considered an excusable delay or excusable failure to perform hereunder and may impede or delay completion of the Development Services. Customer further acknowledges that such delays or failures may result in additional charges for the Development Services.
+
+
+
+3.	Intellectual Property and Proprietary Rights.
+
+
+A.            Ownership of and Limited License to Customer Data. Except for AppTech’s use rights in this Agreement, as between the parties, Customer owns and retains all right, title, and interest in and to its Customer Data. Customer grants to AppTech a limited, royalty-free, non-exclusive, worldwide right and license to access, collect, use, process, store, copy, and create derivative works from the Customer Data only to provide, maintain, and improve the AppTech Services as set forth in this Agreement.
+
+
+
+B.            Use of Customer Data. Customer acknowledges and agrees that AppTech may use the Customer Data in accordance with the AppTech Privacy Policy for as long as reasonably necessary for the limited purpose of providing, maintaining, and improving the AppTech Services, which includes improving its data models as necessary to support such uses (the "Permitted Purpose.") Customer further acknowledges and agrees that, in connection with the Permitted Purpose, the Customer Data may be commingled with data received from other Customers using the AppTech Services; provided, that (i) the Customer Data shall not itself be made available to any other customer, and (ii) Customer will not be identified to the extent the Customer Data contributes to the analytical results provided to other Customers of the AppTech Services.
+
+
+
+C.            Feedback. If Customer (including any Authorized User) provides AppTech any feedback in connection with the AppTech Services, Customer shall use reasonable efforts to ensure the accuracy of suchfeedback and grants AppTech an unlimited, irrevocable, perpetual, sublicensable, royalty-free license to use any such feedback or suggestions for any purpose without any obligation or compensation to Customer or any Authorized User.
+
+
+
+D.            Aggregated Data. Customer acknowledges and agrees that AppTech may use data derived from Customer Data that is aggregated with comparable data received from other customers (“Aggregated Data”) for internal purposes such as operating, maintaining, and improving the AppTech Services and distribution in general benchmarking or industry-related reports. For absolute clarity, such Aggregated Data shall not be reasonably capable of identifying any underlying individual nor identify the Customer as a source of any Aggregated Data. AppTech will make no attempt to reidentify the Aggregated Data.
+
+
+
+
+
+
+
+ 	5
+
+
+
+
+E.             Beta Services. From time to time, AppTech may invite Customer to try features or pre-release versions of the AppTech Services that are not generally available to customers for non-production use (“Beta Services”). Customer may accept or decline such invitation in its sole discretion. Beta Services will be clearly designated as beta, pilot, limited release, developer preview, non-production, evaluation or by a description of similar import. Customer's use of Beta Services will be for the term specified by AppTech and if no term is specified, then for the earlier of one year from the start date of the Beta Services or when that version of the Beta Services becomes generally available, and therefore part of the AppTech Services. AppTech may discontinue Beta Services at any time in AppTech’s sole discretion and may never make them generally available. NOTWITHSTANDING ANYTHING TO THE CONTRARY HEREIN, ANY BETA SERVICES PROVIDED HEREUNDER ARE “AS-IS” WITHOUT ANY WARRANTY OF ANY KIND. APPTECH HEREBY DISCLAIMS ANY AND ALL LIABILITY FOR ANY HARM OR DAMAGE ARISING OUT OF OR IN CONNECTION WITH ANY BETA SERVICE RECEIVED BY CUSTOMER HEREUNDER.
+
+
+
+F.             Work Product. Except as otherwise provided in Sections 3H and 3I, below, the phrase “Work Product” shall mean the Deliverables that are conceived, designed, practiced, prepared, produced or developed by AppTech pursuant to Section 2F above. To the fullest extent permitted under law, and upon payment in full to AppTech, all Work Product shall be the property of Customer and shall be deemed to be a “work made for hire” (as defined in Section 101 of Title 17 of the United States Code). Work Product excludes AppTech Proprietary Intellectual Property, as defined below, and any Third Party Materials that are incorporated into the Work Product.
+
+
+
+G.            AppTech Intellectual Property.
+
+
+
+i.       AppTech owns and shall retain the exclusive right, title, interest, and ownership in and to all (i) Intellectual Property Rights related to the Platform, Software, Documentation, AppTech Services and Development Services, related documentation and other proprietary rights, (ii) all software related to the Platform, including but not limited to, software documentation, all modifications and/or enhancements to such software (regardless of the source of inspiration for any such enhancement or modification and regardless of whether Customer has provided input regarding such modifications and/or enhancements), and all inventions or discoveries embodied within such software, (iii) AppTech’s education or training content, and (iv) pre-existing materials related to AppTech Services, Development Services, training and support processes and methodologies (collectively, “AppTech Intellectual Property Rights”).
+
+
+
+ii.       Customer agrees that no title or ownership of or to any of the AppTech Intellectual Property Rights or proprietary rights therein are transferred or conveyed by this Agreement, except Customer’s limited rights to access and use the Platform pursuant to this Agreement and the Work Product. Customer may not, and may not attempt to, copy, replicate, duplicate, create any derivative work from, decompile, disassemble or reverse engineer, any AppTech Intellectual Property Rights or any part of the Platform, Software or other AppTech proprietary information or intellectual property. Notwithstanding any other term of this Agreement, AppTech may access and use, and shall retain all right, title and interest in transactional and performance data related to use of the Platform, which may include aggregated and anonymized data based upon Customer Data. AppTech reserves to itself all rights that are not expressly granted pursuant to this Agreement.
+
+
+
+iii.       Customer acknowledges that as part of performing the Development Services and development of the Work Product, AppTech may utilize pre-existing proprietary software, methodologies, tools, specifications, drawings, sketches, models, samples, records, documentation, works of authorship or creative works, ideas, knowledge or data which has been originated or developed by AppTech or its affiliates or by third parties under contract to AppTech to develop same, or which has been purchased by, or licensed to, AppTech, or customization to AppTech’s pre-existing intellectual property to enable the development of the Work Product (collectively, “Additional AppTech Intellectual Property”). Customer further acknowledges that any new or improved methodologies or tools developed by AppTech during the course of any developing any Work Product hereunder which are not explicitly included with Customer’s Deliverables shall be included within the meaning of Additional AppTech Intellectual Property. Customer agrees that Additional AppTech Intellectual Property is the sole property of AppTech and that AppTech will at all times retain sole and exclusive title to and ownership thereof. Except as expressly provided above, nothing contained in this Agreement or otherwise shall be construed to grant to Customer any right, title, license or other interest in, to or under any Additional AppTech Intellectual Property (whether by estoppel, implication or otherwise). Customer agrees to take all reasonably necessary actions, which are necessary to assure the conveyance of all right, title and interest in, to and under any Additional AppTech Intellectual Property or any enhancement thereof, including copyright, to AppTech. The cost of conveying such rights shall be at AppTech's expense.
+
+
+
+
+
+
+
+
+ 	6
+
+
+
+
+H.            Ownership of and Limited License to AppTech Intellectual Property Rights and AppTech Technologies. AppTech owns and retains all rights, title, and interest in and to the AppTech Intellectual Property Rights, AppTech Technologies and AppTech Services. AppTech grants to Customer a limited, non-exclusive, worldwide right and license to access and use the AppTech Services, including the Software, Platform, Documentation and Reporting Results, and AppTech Patents (as defined below) only for the use of the AppTech Services only as set forth in this Agreement and the accompanying Strategic Partner Agreements. Where, and if different (stated licensure) between the two agreements, licensure provisions stated in this Agreement will prevail. For purposes of this Agreement, “AppTech Patents” shall mean any patents owned or licensed by AppTech necessary for the use of the AppTech Services, the Platform, Software, Documentation or Reporting Results where the use of such patents would be an infringement of AppTech’s Intellectual Property Rights without the license grant under this Section 3H. The license granted under this Section 3H shall automatically terminate upon the termination of this Agreement for any reason.
+
+
+
+I.              Residual Rights. Notwithstanding the above, Customer agrees that AppTech, its employees and agents shall be free to use and employ their general skills, know-how, and expertise, and to use, disclose, and employ any generalized ideas, concepts, know-how, methods, techniques or skills gained or learned during the course of any Development Services performed hereunder, subject to its obligations to Customer hereunder. Customer understands and agrees that AppTech may perform similar services for third parties using the same personnel that AppTech may utilize for rendering Development Services for Customer hereunder.
+
+
+
+4.	AppTech Commitments.
+
+
+A.            Compliance with Applicable Law. AppTech will comply with all Applicable Laws in connection with its provision of the AppTech Services and Development Services.
+
+
+
+B.            Security. AppTech will use customary efforts to maintain a security program with reasonable and appropriate administrative, technical, organizational, and physical security measures designed to protect Customer Data against unauthorized access, disclosure and loss.
+
+
+
+C.             Obligations under Exhibit B. AppTech will perform its obligations set out in the California Data Processing Addendum attached hereto as Exhibit B.
+
+
+
+D.            AppTech Privacy Policy. AppTech will maintain a readily accessible privacy policy on its website (i.e., the AppTech Privacy Policy) that includes accurate disclosures concerning its data practices that complies with Applicable Laws, including disclosures concerning AppTech’s collection, use, processing, and sharing of Customer Data for fraud and abuse detection and prevention and other compatible purposes.
+
+
+
+E.             Deletion of Data. Upon termination of this Agreement, Customer may request deletion of the Customer Data. Subject to the provision of Section 3(B) (Use of Customer Data), AppTech will perform such deletion in accordance with Applicable Law and its record retention and destruction policy.
+
+
+
+F.             Non-Use. Except as provided below, for a period of sixty (60) months following the Effective Date (the “Non-Use Period”), AppTech will not develop a consumer-to-consumer mobile payment application for any third party to use in the United States without the prior written consent of Customer. After the Non-Use Period, AppTech will not be prohibited from developing consumer-to-consumer mobile payment applications for any party. The non-use obligation under this Section 4F will automatically and immediately terminate if Customer does not pay the Fees pursuant to Exhibit G attached hereto. For clarification purposes and notwithstanding anything to the contrary in this Agreement, this Section 4F will not prohibit AppTech from (i) licensing any of its Intellectual Property Rights or other intellectual property or proprietary information to any party who may or may not be competitors to Customer, (ii) developing merchant-to-consumer or merchant-to-merchant mobile payment applications for itself or any third party, (iii) developing consumer-to-consumer mobile payment applications for itself or any third party for use outside the United States, or (iv) developing consumer-to-consumer mobile payment applications for use in affinity groups.
+
+
+
+
+
+
+
+ 	7
+
+
+
+
+5.	Customer Commitments.
+
+
+A.            Compliance with Applicable Law. Customer will comply with all Applicable Laws in connection with the use of the AppTech Services and Development Services.
+
+
+
+B.            Obligations under Exhibit B. Customer will perform its obligations set out in the California Data Processing Addendum attached hereto as Exhibit B.
+
+
+
+C.            Account Registration. In order to access the AppTech Platform console, Customer shall register for an AppTech account. Account information must be accurate, current, and complete, and will be treated by AppTech in accordance with the AppTech Privacy Policy. Customer agrees that AppTech may send notices, statements, and other information by email or through Customer’s account. Customer will be solely responsible for all use of the AppTech Services under its account, including without limit the acts and omissions of its users and any decisions made based on the provision of the AppTech Services to Customer. In addition, Customer will use commercially reasonable efforts to prevent unauthorized access to the AppTech Services and will notify AppTech immediately of such unauthorized access.
+
+
+
+D.            Customer Responsibilities. Customer will use the AppTech Platform and Services only: (i) for the purpose of conducting BaaS, PaaS and CXS transactional business or other services made available by AppTech in future iterations of its offering; (ii) in accordance with the terms of this Agreement, the associated Strategic Partner Agreement, and the Terms and Conditions as described by AppTech; and (iii) in compliance with Applicable Laws and any contractual or other obligation Customer has to any third party. Customer is solely responsible for ensuring that its (or its Clients' and/or Affiliates) use of the AppTech Platform and Services, including its provision of the Customer Data, does not violate any Applicable Laws. Customer is solely responsible for any actions or decisions it makes in connection with its use of the AppTech Platform and Services and AppTech does not assume any responsibility or liability for such actions or decisions. If Customer’s Clients or Affiliates use the AppTech Platform and/or Services, Customer warrants that it has the authority to bind those Clients and Affiliates to this Agreement and shall be fully liable for Customer’s Clients and Affiliates if such Clients and Affiliates do not comply with the terms and obligations set forth herein this Agreement, any Strategic Partner Agreement or any Order Form.
+
+
+
+E.             Usage Restrictions. Customer shall not: (i) make the AppTech Services available to anyone other than Authorized Users or, to the extent Customer is using the AppTech Services for the benefit of its Clients pursuant to Section 2(E); (ii) transfer, sublicense, resell, time share or similarly exploit the AppTech Services except, if applicable, pursuant to Section 2(E); (iii) access the AppTech Services, including the Software, Documentation and Analytical Results, to build a competitive product or service; (iv) reverse engineer, modify, adapt, or otherwise attempt to gain unauthorized access to the AppTech Services, or introduce any malicious code into the AppTech Services; (v) provide to AppTech any Customer Data that contains Sensitive Personal Information; or (vi) use the AppTech Services for any purposes not expressly permitted by this Agreement.
+
+
+
+F.             IMPORTANT FCRA RESTRICTIONS. AppTech is not a consumer-reporting agency (“Consumer Reporting Agency") as defined by the Fair Credit Reporting Act, 15 U.S.C. § 1681 et seq. ("FCRA") and any Analytical Results do not constitute “Consumer Reports”, as that term is defined in the FCRA. Customer will not use the AppTech Platform or AppTech Services for any purposes enumerated in the FCRA.
+
+
+
+G.            Customer Data, Privacy Notice and Consent. Customer is responsible for the accuracy and completeness of Customer Data that it transfers to AppTech and shall ensure it has the right to transfer (or provide or authorize access to) Customer Data to AppTech for the purposes contemplated in this Agreement (and has obtained any necessary written consents or authorizations to do so). Customer will only transfer (or provide or authorize access to) Customer Data to AppTech that has been collected, processed and stored in accordance with the AppTech Privacy Policy and Applicable Laws. Customer will ensure that its privacy notice is readily accessible on applicable Customer Properties and includes accurate disclosures concerning the activities contemplated under this Agreement that complies with Applicable Laws, including: the collection and processing of Customer Data for the purposes contemplated in this Agreement; Customer is solely responsible for obtaining any necessary written consents, permissions and approvals from and providing any written notices to End Users required by Applicable Laws and this Agreement in connection with the activities described herein. The Parties will provide reasonable assistance and reasonably cooperate with each other to assist with each party's compliance with Applicable Laws and this Section 5(G).
+
+
+
+
+
+
+
+ 	8
+
+
+
+
+H.            Due Diligence and Remedial Action. Customer will conduct reasonable due diligence into any complaint Customer receives relating to their or Customer’s Clients use of the AppTech Services, such as any decisions made based on the provision of the AppTech Services to Customer. Customer will take appropriate action in response to such complaints (including by promptly providing feedback to AppTech through the AppTech Platform if Customer determines that such action is needed to correct any decision made based on the provision of the AppTech Services to Customer.
+
+
+
+6.	Payment.
+
+
+A.            Fees and Payment Terms. The fees for the AppTech Services, and Development Services and all other services provided by AppTech under this Agreement and the terms of payment for such fees will be set forth on Exhibit G (the “Fees”). Fees for any new or amended Order Form or SOW or changed AppTech Services will be provided in additional annexes to Exhibit G or in such new or amended Order Form or SOW. Except as provided herein, all Fees are non-cancelable and non-refundable. Customer shall be responsible for any payments owed but not paid by any of Customer’s Affiliates ordering AppTech Services in any Order Form.
+
+
+
+B.            Taxes. The Fees will include any local, state, federal, VAT, sales, use, excise or other taxes, levies or duties where the AppTech Services or Development Services are taxable in the applicable jurisdiction. Customer is responsible for paying any such taxes, unless Customer provides AppTech with a valid tax exemption certificate authorized by the appropriate taxing authority, and excluding taxes based on AppTech’s income payable by AppTech without regard to the transactions contemplated by this Agreement. If applicable, AppTech reserves the right to gross up any Fees, if any required withholding prevents AppTech from receiving the full amount set forth in the applicable Strategic Partner Agreement, Order Form and/or SOW.
+
+
+
+7.	Confidentiality.
+
+
+A.            Definitions. As used herein, “Confidential Information” means all confidential information disclosed by a party (“Disclosing Party”) to the other party (“Receiving Party”), whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information of Customer shall include Customer Data, and Confidential Information of AppTech shall include the Platform, Software, all Documentation and the Beta Services. Confidential Information of each party shall include the terms and conditions of this Agreement and all Strategic Partner Agreements and Order Forms, as well as business and marketing plans, technology and technical information, product plans and designs, pricing, and business processes disclosed by such party. However, Confidential Information shall not include any information that the Receiving Party can document (i) is or becomes generally available to the public without breach of any obligation owed to the Disclosing Party; (ii) was known to the Receiving Party prior to its disclosure by the Disclosing Party without breach of any obligation owed to the Disclosing Party; (iii) is received from a third party without breach of any obligation owed to the Disclosing Party; or (iv) was independently developed by the Receiving Party.
+
+
+
+B.            Confidentiality Obligations. Receiving Party shall use the same degree of care that it uses to protect the confidentiality of its own Confidential Information of like kind (but in no event less than reasonable care) (i) not to use any Confidential Information of the Disclosing Party for any purpose outside the scope of this Agreement; and (ii) except as otherwise authorized by the Disclosing Party in writing or as necessary to fulfill Receiving Party’s data protection rights and obligations as described herein, to limit access to Confidential Information of the Disclosing Party to those of its employees, contractors and agents who need such access for purposes consistent with this Agreement. Neither party shall disclose the terms of this Agreement or any Strategic Partner Agreement and Order Form to any third party other than its legal counsel and accountants or in confidence in connection with bona fide fundraising or Merger & Acquisition due diligence activities.
+
+
+
+C.            Mandated Disclosures. The Receiving Party may disclose Confidential Information of the Disclosing Party if it is compelled by law to do so; provided, the Receiving Party gives the Disclosing Party prior written notice of such compelled access or disclosure (to the extent legally permitted) and reasonable assistance, at the Disclosing Party's cost, if the Disclosing Party wishes to contest the access or disclosure. If the Receiving Party is compelled by law to access or disclose the Disclosing Party’s Confidential Information as part of a civil proceeding to which the Disclosing Party is a party, and the Disclosing Party is not contesting the access or disclosure, the Disclosing Party will reimburse the Receiving Party for its reasonable cost of compiling and providing secure access to such Confidential Information.
+
+
+
+
+
+
+
+ 	9
+
+
+
+
+8.	Warranties; Disclaimer.
+
+
+A.            Warranties. Each party represents and warrants that it has the authority to enter into this Agreement. AppTech further warrants that (i) the AppTech Services and Development Services will perform materially in accordance with applicable Documentation or SOW and (ii) AppTech will not materially decrease the functionality of the AppTech Platform and/or AppTech Services during the subscription term stated on the applicable Strategic Partner Agreement and/or Order Form. For any breach of the warranty in the foregoing sentence, Customer’s exclusive remedies are described in Sections 11(B) (Termination for Cause) and 11(C) (Refund or Prepayment for Termination for Cause).
+
+
+
+B.            DISCLAIMER. EXCEPT AS EXPRESSLY PROVIDED IN THIS AGREEMENT, THE APPTECH PLATFORM, APPTECH SERVICES, DEVELOPMENT SERVICES AND ALL RELATED SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” AND ANY PROMISES CONTAINED IN THIS AGREEMENT ARE IN LIEU OF ALL OTHER WARRANTIES, REPRESENTATIONS OR CONDITIONS, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT, ALL OF WHICH ARE EXPRESSLY DISCLAIMED. APPTECH DOES NOT REPRESENT THAT THE APPTECH SERVICES OR DEVELOPMENT SERVICES WILL BE UNINTERRUPTED OR ERROR FREE OR MEET CUSTOMER’S OR CUSTOMER’S CLIENTS REQUIREMENTS OR THAT THE ANALYTICAL RESULTS WILL BE ACCURATE OR COMPLETE. CUSTOMER ACKNOWLEDGES THAT, AS A SAAS-BASED SERVICE, THE FUNCTIONALITY AND INTERFACES OF THE APPTECH SERVICES MAY CHANGE OVER TIME.
+
+
+
+9.	Indemnification.
+
+
+A.            By AppTech.
+
+
+
+i.                General. AppTech will defend and hold harmless Customer, its officers, directors and employees (each a “Customer Indemnitee”) from and against all losses, damages, deficiencies, claims, actions, judgments, settlements, interest, awards, penalties, fines, costs or expenses of whatever kind, including reasonable attorneys’ fees (“Losses”) incurred by any Customer Indemnitee related to, based on or resulting from: (i) infringement or misappropriates the U.S. intellectual property right of a third party by the AppTech Services or Work Product; (ii) AppTech’s gross negligence or willful misconduct; or (iii) material breach of this Agreement by AppTech,.
+
+
+
+ii.               Infringement Options. If the use of the AppTech Services or Work Product by Customer has become, or in AppTech’s sole discretion is likely to become, the subject of any Losses, AppTech may at its option and expense: (i) procure for Customer the right to continue using the AppTech Services or Work Product as set forth herein; (ii) modify the AppTech Services or Work Product to make it non-infringing; or (iii) if the foregoing options are not reasonably practicable, terminate this Agreement and refund Customer any unused pre-paid Fees.
+
+
+
+iii.              Limitations. AppTech will have no liability or obligation with respect to any Losses if such Loss is caused in whole or in part by: (i) use of the AppTech Services or Work Product by Customer that is not in accordance with this Agreement; or (ii) the combination, operation or use of the AppTech Services or Work Product with other applications, portions of applications, products or services where the AppTech Services or Work Product would not by itself be infringing. This Section 9A states AppTech’s entire and exclusive obligation, and Customer’s exclusive remedy, for any claim of any nature related to the subject matter described in this Section 9A.
+
+
+
+B.            By Customer. Customer will defend and hold harmless AppTech, its officers, directors and employees (each an “AppTech Indemnitee”) against all Losses incurred by any AppTech Indemnitee related to, based on or resulting from: (i) any violation or alleged violation by Customer of Section 2 or Section 5; (ii) material breach of this Agreement by a Customer, Client or Customer’s Affiliate; (iii) Customer’s gross negligence or willful misconduct; or (iv) use of the AppTech Services or Work Products by Customer that is not in accordance with this Agreement.
+
+
+
+
+
+
+
+ 	10
+
+
+
+
+C.            Indemnity Process. Each Party shall promptly notify the other Party in writing of any third party claim (“Action”) for which such Party believes it is entitled to be indemnified pursuant to Section 9A or 9B. The Party seeking indemnification (the “Indemnitee”) shall cooperate with the other Party (the “Indemnitor”) at the Indemnitor’s sole cost and expense. The Indemnitor shall promptly assume control of the defense and investigation of such Action and shall employ the counsel of its choice, which shall be reasonably acceptable to Indemnitee, to handle and defend the same, at the Indemnitor’s sole cost and expense. The Indemnitee may participate in and observe the proceedings at its own cost and expense with a counsel of its own choosing. The Indemnitor shall not settle any Action on any terms or in any manner that adversely affects the rights of any Indemnitee without the Indemnitee’s prior written consent, which shall not be unreasonably withheld or delayed. If the Indemnitor fails or refuses to assume control of the defense of such Action, the Indemnitee shall have the right, but no obligation, to defend against such Action, including settling such Action after giving notice to the Indemnitor, in each case in such manner and on such terms as the Indemnitee may deem appropriate. The Indemnitee’s failure to perform any obligations under this Section 6.3 will not relieve the Indemnitor of its obligations under this Article 6, except to the extent that the Indemnitor can demonstrate that it has been materially prejudiced as a result of such failure.
+
+
+
+10.	Limitation of Liability.
+
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT, CONTRACT, OR OTHERWISE, WILL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES OF ANY CHARACTER, INCLUDING DAMAGES FOR LOSS OF GOODWILL, LOST PROFITS, LOST SALES OR BUSINESS, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, LOST DATA, OR FOR ANY AND ALL OTHER SIMILAR DAMAGES OR LOSSES, EVEN IF SUCH PARTY HAS BEEN ADVISED, KNEW OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+
+EXCEPT AS DESCRIBED IN THIS PARAGRAPH, UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT, CONTRACT, OR OTHERWISE, WILL EITHER PARTY BE LIABLE TO THE OTHER PARTY FOR ANY DAMAGES, COSTS, OR LIABILITIES IN AGGREGATE IN EXCESS OF THE AMOUNTS PAID BY CUSTOMER IN THE TWELVE-MONTH PERIOD PRIOR TO THE INITIAL LIABILITY CLAIM. THE FOREGOING LIMITATION WILL NOT APPLY TO (A) A PARTY’S INDEMNITY OBLIGATIONS SET FORTH IN SECTION 9, (B) A PARTY’S GROSS NEGLIGENCE, WILLFUL MISCONDUCT, AND/OR FRAUD, OR (C) CUSTOMER’S PAYMENT OBLIGATIONS FOR FEES HEREUNDER.
+
+
+
+THE PROVISIONS OF THIS SECTION ALLOCATE THE RISKS UNDER THIS AGREEMENT BETWEEN THE PARTIES, AND THE PARTIES HAVE RELIED ON THE LIMITATIONS SET FORTH HEREIN IN DETERMINING WHETHER TO ENTER INTO THIS AGREEMENT.
+
+
+
+11.	Term and Termination.
+
+
+A.            Term. The term of this Agreement will commence on the Effective Date and will continue so long as AppTech is providing AppTech Services to Customer under an applicable Strategic Partner Agreement or active Order Form. Each Order Form shall identify the initial subscription period for the applicable AppTech Service and unless otherwise stated on the applicable Strategic Partner Agreement, or other associated Order Form, such subscription periods shall automatically renew for additional (12) months unless either party provides written notice of its intent not to renew at least sixty (60) days prior to the end of the then-current subscription period. After the initial subscription period, if AppTech’s pricing increases, AppTech will give Customer at least sixty (60) days prior notice of the planned increases, with any such increases taking effect the following renewal subscription period.
+
+
+
+B.            Termination for Cause; Insolvency. Termination of this Agreement will terminate any and all Strategic Partner Agreements, Order Forms and SOWs hereunder. Either party may terminate this Agreement immediately on giving notice in writing to the other party if the other party commits any material breach of any term of this Agreement and has not cured such breach within thirty (30) days of its receipt of written notice of the breach by the non-breaching party. In addition, either party may terminate this Agreement immediately on giving notice in writing to the other party if the other party files for bankruptcy; becomes or is declared insolvent, or is the subject of any proceedings related to its liquidation, insolvency or the appointment of a receiver or similar officer for it; makes an assignment for the benefit of all or substantially all of its creditors; or enters into an agreement for the cancellation, extension, or readjustment of substantially all of its obligations.
+
+
+
+
+
+
+
+ 	11
+
+
+
+
+C.            Refund or Payment upon Termination for Cause. Upon any termination for cause by Customer, AppTech will refund Customer any prepaid, unused Fees covering the remainder of the term of all subscriptions of applicable Order Forms or work being provided under any active SOW after the effective date of termination. Upon any termination for cause by AppTech, Customer will pay any unpaid Fees covering the remainder of the term of all Order Forms and work performed under active SOWs. In no event will any termination relieve Customer of the obligation to pay any Fees payable to AppTech for the period prior to the effective date of termination.
+
+
+
+D.            Suspension of AppTech Services. Notwithstanding any provision herein to the contrary, in the event of any activity by Customer or any of its users (including Clients and Affiliates) that has (or in AppTech’s assessment is likely to have) an adverse effect on the operation of the AppTech Services, AppTech may suspend the AppTech Services to Customer. In such event, AppTech will notify Customer as soon as reasonably practical and will collaborate with Customer in good faith to remedy the cause of the adverse effect. If the Parties do reach an agreement on a remedy within fifteen days, then AppTech may immediately terminate this Agreement for cause.
+
+
+
+E.             Survival. The provisions of this Section 11 (Term and Termination) and the following Sections will survive any termination of this Agreement: Section 3 (Intellectual Property and Proprietary Information), Section 4A-4E (AppTech Commitments), Section 5 (Customer Commitments), Section 6 (Payment), Section 7 (Confidentiality), Section 8 (Disclaimer), Section 9 (Indemnification), Section 10 (Limitation of Liability),Section 12 (General Provisions) and applicable Exhibits.
+
+
+
+12.	General Provisions.
+
+
+A.            Marketing. Customer grants AppTech the right to use Customer’s company name and logo as a reference for marketing or promotional purposes on AppTech’s website and in other public or private communications with existing or potential AppTech customers, subject to Customer’s standard trademark usage guidelines as provided to AppTech from time-to-time.
+
+
+
+B.            Force Majeure. Neither Party shall be liable, or be deemed to be in default, to the other Party hereunder by reason or account of any delay or omission caused by epidemic or pandemic, fire, power outages, action of the elements, strikes, lockouts, sabotage (except as caused by a Party’s employees or agents), labor disputes, governmental law, regulations, ordinances, order of a court of competent jurisdiction, executive decree or order, act of God or public enemy, war, riot, acts of terrorism, civil commotion, earthquake, flood, explosion, casualty, embargo, pandemic or any other similar cause to the extent beyond the control of such Party (each, a “Force Majeure Event”).
+
+
+
+C.            No Agency. Nothing herein will be construed to create a partnership, joint venture or any type of agency relationship between AppTech and Customer.
+
+
+
+D.            Notices. All notices, requests, consents and other communications hereunder shall be in writing, shall be addressed to the receiving party’s address set forth in the first paragraph of this Agreement or to such other address as a party may designate by notice hereunder, and shall be either (a) delivered by hand, (b) made by facsimile or other electronic transmission, (c) sent by recognized overnight courier providing evidence of delivery, or (d) sent by registered or certified mail, return receipt requested, postage prepaid. All notices, requests, consents and other communications hereunder shall be deemed to have been (a) if by hand, at the time of the delivery thereof to the receiving party at the address of such party set forth above, (b) if made by facsimile or other electronic transmission, at the time that receipt thereof has been acknowledged by electronic confirmation or otherwise, (c) if sent by overnight courier providing evidence of delivery, on the next business day following the day such notice is delivered to the courier service, or (d) if sent by registered or certified mail, on the fifth (5th) business day following the day such mailing is made.
+
+
+
+E.             Governing Law; Venue. This Agreement and any disputes hereunder will be governed by the laws of the State of California, without regard to its conflict of law principles. The state and federal courts located in San Diego County, California shall have exclusive jurisdiction to adjudicate any dispute arising out of or relating to this Agreement. Each party hereby consents to the exclusive jurisdiction of such courts.
+
+
+
+
+
+
+
+ 	12
+
+
+
+
+F.             Export Control Laws. Each party shall comply with United States and foreign export control laws or regulations applicable to its performance under this Agreement. Without limiting the foregoing, both parties represent and warrant that (i) it is not listed on any United States government list or is a prohibited or restricted party; (ii) it is not subject to any United Nation, United States, European Union, or any other applicable economic sanctions or trade restrictions; and (iii) it does not have operations in a country subject to comprehensive United States trade sanctions.
+
+
+
+G.            No Assignment. Neither party may assign any of its rights or obligations hereunder, whether by operation of law or otherwise, without the prior written consent of the other party (not to be unreasonably withheld). Notwithstanding the foregoing, either party may assign this Agreement in its entirety (including all Order Forms), without consent of the other party, to an Affiliate or in connection with a merger, acquisition, corporate reorganization, or sale of all or substantially all of its assets. Subject to the foregoing, this Agreement shall bind and inure to the benefit of the parties, their respective successors and permitted assigns.
+
+
+
+H.            Severability; Waiver. If any provision of this Agreement is held to be unenforceable, such provision will be reformed to the extent necessary to make it enforceable, and such holding will not impair the enforceability of the remaining provisions. The failure by a party to exercise any right hereunder or to enforce strict performance of any provision of this Agreement will not waive such party's right to exercise that or any other right in the future.
+
+
+
+I.              Entire Agreement. This Agreement, including all exhibits hereto, any Strategic Partner Agreement, Strategic Partner Agreement and all Order Forms, constitutes the entire agreement between the Parties and supersedes all prior and contemporaneous agreements, proposals or representations, written or oral, concerning its subject matter. Without limiting the foregoing, this Agreement supersedes the terms of any online agreement electronically accepted by Customer. No modification, amendment, or waiver of any provision of this Agreement shall be effective unless in writing and signed by the party against whom the modification, amendment or waiver is to be asserted. However, to the extent of any conflict or inconsistency between the provisions in the body of this Agreement and any exhibit or addendum hereto, the Strategic Partner Agreement, or any Order Form, the terms of such exhibit, addendum, Strategic Partner Agreement or Order Form shall prevail. Notwithstanding any language to the contrary therein, no terms or conditions stated in a Customer purchase order, vendor onboarding process or web portal, or any other Customer order documentation (excluding Order Forms) shall be incorporated into or form any part of this Agreement, and all such terms or conditions shall be invalid.
+
+
+
+J.             Counterparts. This Agreement may be executed and delivered by PDF counterparts or electronic signatures and such execution and delivery will have the same force and effect of an original document with original signatures.
+
+
+
+K.            Notice of Change. AppTech may change, amend, add to, or delete any item, term or condition of this Agreement, including, but not limited to, the amount of any fees or charges at any time. If AppTech makes such a change, Customer agrees that AppTech may provide Customer with notice of the change by any reasonable method, such as by including a message on or with Customer’s Account statement or by sending an email to AppTech’s contact of record for Customer’s Account. The change will be effective upon the date of the notice unless otherwise provided. If under applicable law any such change requires Customer’s approval, Customer’s continued use of the AppTech Platform on or after the date Customer receives the notice means that Customer accepts and agrees to the change.
+
+
+
+L.             Arbitration. Any dispute arising out of or relating to this Agreement shall be fully settled in accordance with the Rules of Conciliation and Arbitration of the JAMS, Inc. The arbitration shall take place in San Diego, California. The award of the arbitrators will be final and binding upon the Parties. Judgment may be entered in any court having jurisdiction.
+
+
+
+[Remainder of Page Intentionally Left Blank – Signature Page to Follow]
+
+
+
+
+
+
+
+
+
+ 	13
+
+
+
+
+IN WITNESS WHEREOF, each of Customer and AppTech have caused this Agreement to be executed and delivered by its duly authorized representative as of the date first written above.
+
+
+
+AppTech Payments Corporation
+
+
+Instacash, Inc.
+
+
+By:	/s/ Luke D’Angelo	 	By:	/s/ Richard Davis
+Name:	Luke D’Angelo	 	Name:	Richard Davis
+Title:	Chief Executive Officer (CEO),	 	Title:	President
+Executive Director & Chairman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Signature Page to the AppTech-Instacash Master Services and Development Agreement]
+
+
+
+ 	14
+
+
+
+
+Exhibit A
+
+
+
+Platform Service Level Agreement
+
+
+
+1.             Introduction. This Platform Service Level Agreement (the “Platform Agreement”) sets forth the service level commitments by AppTech in connection with its provision of the AppTech Platform Services (the “Platform Services”) to Customer. Any capitalized term not defined in this Exhibit will have the meaning given it in the main body of the Agreement.
+
+
+
+2.             Service Level Commitments. AppTech will use commercially reasonable efforts to meet the Monthly Uptime Percentage (as set forth below) for the AppTech Platform console (the “Console”) and the applicable application programming interfaces used by Customer in connection with the AppTech Services (collectively, the “API”).
+
+
+
+3.             Definitions.
+
+
+
+A.            “Monthly Uptime Percentage" is calculated by subtracting from 100% the percentage of continuous 5-minute periods during a service month in which the API was in a state of Unavailable Time (defined below) as identified by Monitoring Service, except when previously notified by AppTech of planned maintenance windows that may require the API to briefly go “offline”. AppTech will take all Customer requests into consideration when performing planned maintenance that could result in planned downtime.
+
+
+
+B.            “Service Credit” is a US Dollar credit, calculated as set forth below, that AppTech will credit back to an eligible Customer account as a percentage of the monthly value of the minimum Fee, based on AppTech’s failure to meet the Monthly Uptime Percentage for a service month period calculated as follows:
+
+
+
+Monthly Uptime Percentage	Service Credit
+[***]	[***]
+
+
+C.            “Unavailable Time” means the API is not available for use according to third party performance and monitoring services contracted by AppTech (the “Monitoring Service”). The Monitoring Service reports of availability can be requested by Customer at any time and may be made available for consumption by Customer from within the Console. Outages due to any Exclusions (defined below) will not be deemed Unavailable Time.
+
+
+
+4.             Credit Request and Payment Procedures. To receive a Service Credit (a “Credit”), Customer must submit a written request to AppTech within thirty (30) days of the incident giving rise to the Credit request to the following email address: support@AppTechcorp.com. Such submission shall include: (A) “SLA Request” as the subject of the e-mail communication; (B) the dates and times of Unavailable Time for which a Credit is being requested; and (C) any documentation supporting the Credit request. Customer understands and agrees that it shall only be entitled to one Credit for any given circumstance even if multiple Credits may be claimed. For example, if one issue causes an issue affecting multiple Customer Clients warranting and SLA Request, one Credit will be approved for such issue. Each Credit approved by AppTech will be applied to future amounts owed by Customer but shall never exceed the total Fees payable by Customer to AppTech in the applicable month; no refunds or cash value will be given for any SLA Request.
+
+
+
+5.             Exclusions. Notwithstanding any provision in this Platform Agreement to the contrary, where an incident is attributable to the following circumstances, it will not be included in the calculation of Monthly Uptime Percentage: (A) is caused by factors outside of AppTech’s reasonable control, including, without limitation, a Force Majeure event as described in Section 12(E) of the Agreement, carrier related problems or issues, or Internet access or related problems occurring beyond the point in the network where AppTech maintains access and control over the AppTech Services; (B) results from any actions or inactions of Customer or any third party (other than AppTech’s agents and subcontractors); (C) results from Customer’s equipment, software or other technology or third party equipment, software or other technology (other than equipment within AppTech’s direct control); (D) occurs during AppTech’s scheduled maintenance not to exceed eight (8) hours per month (for which AppTech provides advanced notice); (E) third party products or services that may be offered in connection with the AppTech Services, including without limitation Third Party Service Providers; or (F) results from any alpha, beta or not otherwise generally available AppTech features or products (collectively, the “Exclusions”).
+
+
+
+6.             Entire Liability. This Platform Agreement states AppTech’s sole and entire liability to Customer, and Customer’s sole remedy, for any failure or non-performance of the API and any AppTech Services related thereto hereunder.
+
+
+
+* * * * * * * * * * * *
+
+
+
+
+
+ 	15
+
+
+
+
+Exhibit B
+
+
+
+California Data Protection and Security Addendum
+
+
+
+Pursuant to the Agreement, and in furtherance of obligations under the California Consumer Privacy Act of 2018 (California Civil Code §§ 1798.100 to 1798.199) and its implementing regulations, as amended or superseded from time to time (“CCPA”), the Parties hereby adopt this Addendum for so long as AppTech maintains Personal Information on behalf of Customer. This Addendum prevails over any conflicting terms of the Agreement but does not otherwise modify the Agreement.
+
+
+
+1.             Definitions. For the purposes of this Addendum, the capitalized terms used in this Addendum and not otherwise defined in this Addendum shall have the definitions set forth in the CCPA.
+
+
+
+2.             Roles and Scope. This Addendum applies to the collection, retention, use, disclosure, and sale of Personal Information provided by Customer or which is collected on behalf of Customer by AppTech (“the Personal Information”) to provide the AppTech Services to Customer pursuant to the Agreement or to perform a Business Purpose. Customer is a Business and appoints AppTech as a Service Provider to process the Personal Information on behalf of Customer. AppTech’s collection, retention, use, disclosure, or sale of Personal Information for its own purposes independent of Customer’s and Customer’s Clients use of the AppTech Services specified in the Agreement are outside the scope of this Addendum.
+
+
+
+3.             Restrictions on Processing. AppTech is prohibited from retaining, using, or disclosing the Personal Information for any purpose other than for the specific purpose of performing the AppTech Services as specified in the Agreement for Customer, as set out in this Addendum, or as otherwise permitted by the CCPA. AppTech shall not further collect, sell, or use the Personal Information except as necessary to perform the Business Purpose.
+
+
+
+4.             Notice. Customer represents and warrants that it has provided notice that the Personal Information is being used or shared consistent with Cal. Civ. Code § 1798.140(t)(2)(C)(i).
+
+
+
+5.             Consumer Rights. AppTech shall provide reasonable assistance to Customer in facilitating compliance with Consumer rights requests. Upon direction by Customer, and in any event no later than thirty (30) days after receipt of a request from Customer, AppTech shall promptly delete the Personal Information as directed by Customer. AppTech shall not be required to delete any of the Personal Information to comply with a Consumer’s request directed by Customer if it is necessary to maintain such information in accordance with Cal. Civ. Code § 1798.105(d), in which case AppTech shall promptly inform Customer of the exceptions relied upon under § 1798.105(d) and AppTech shall not use the Personal Information retained for any other purpose than provided for by that exception.
+
+
+
+6.             Deidentified Information. In the event that either party shares Deidentified Information with the other party, the receiving party warrants that it: (i) has implemented technical safeguards that prohibit reidentification of the Consumer to whom the information may pertain; (ii) has implemented business processes that specifically prohibit reidentification of the information; (iii) has implemented business processes to prevent inadvertent release of Deidentified Information; and (iv) will make no attempt to reidentify the information.
+
+
+
+7.             Mergers, Sales, or Other Asset Transfers. In the event that either party transfers to a Third Party the Personal Information of a Consumer as an asset that is part of a merger, acquisition, bankruptcy, or other transaction in which the Third Party assumes control of all or part of such party to the Agreement, that information shall be used or shared consistently with applicable law. If a Third Party materially alters how it uses or shares the Personal Information of a Consumer in a manner that is materially inconsistent with the promises made at the time of collection, it shall provide prior notice of the new or changed practice to the Consumer in accordance with applicable law.
+
+
+
+8.             As Required by Law. Notwithstanding any provision to the contrary of the Agreement or this Addendum, AppTech may cooperate with law enforcement agencies concerning conduct or activity that it reasonably and in good faith believes may violate federal, state, or local law or in good faith effort to comply with a subpoena or search warrant served upon it.
+
+
+
+9.             Sale of Information. The Parties acknowledge and agree that the exchange of Personal Information between the Parties does not form part of any monetary or other valuable consideration exchanged between the Parties with respect to the Agreement or this Addendum.
+
+
+
+
+
+
+
+ 	16
+
+
+
+
+Exhibit C
+
+
+
+Client Pass-Through Addendum
+
+
+
+Pursuant to Section 2(E) of this Agreement, this Client Pass-Through Addendum (the “Pass-Through Addendum”) describes the specific obligations that Customer shall expressly impose on its Clients via a written agreement executed by Client and Customer before (i) allowing such Clients to access the AppTech Services or (ii) using the AppTech Services on behalf of such Clients. Any capitalized term not defined in this Pass-Through Addendum will have the meaning given it in the main body of the Agreement.
+
+
+
+1.             Proprietary Rights. Customer shall include the following terms regarding proprietary rights in each written agreement with its Client (a “Client Agreement”):
+
+
+
+A.            Ownership of and Limited License to Customer Data. [CLIENT] grants to [CUSTOMER] a limited, royalty-free, non-exclusive, worldwide right and license to access, collect, use, process, and store Customer Data only to use the AppTech Platform on behalf of [CLIENT] as set forth in this Agreement. [CLIENT] grants to AppTech a limited, royalty-free, non-exclusive, worldwide right and license to access, collect, use, process, store, copy, and create derivative works from the Customer Data only to provide, maintain, and improve the AppTech Platform and AppTech Services offering.
+
+
+
+B.            Use of Customer Data. [CLIENT] acknowledges and agrees that AppTech may use the Customer Data in accordance with the AppTech Privacy Policy for as long as reasonably necessary for the limited purpose of providing, maintaining, and improving the AppTech Services (the “Permitted Purpose”). [CLIENT] acknowledges and agrees that, in connection with the Permitted Purpose, Customer Data will be commingled with data received from other customers and end users of the AppTech Services. The Customer Data shall not itself be made available to any other customer.
+
+
+
+C.            Feedback. If [CLIENT] provides [CUSTOMER] or AppTech any feedback regarding the AppTech Services, [CLIENT] grants to AppTech an unlimited, irrevocable, perpetual, sublicensable, royalty-free license to use any such feedback or suggestions for any purpose without any obligation or compensation to [CLIENT].
+
+
+
+D.            Aggregated Data. [CLIENT] acknowledges and agrees that AppTech may use data derived from Customer Data that is aggregated with data received from other customers (“Aggregated Data”) for internal purposes such as operating, maintaining, and improving the AppTech Services and distribution in general benchmarking or industry-related reports.
+
+
+
+2.             Customer Commitments. Customer shall commit to the following obligations in each Client Agreement:
+
+
+
+A.            Security. [CUSTOMER] will maintain a security program with reasonable and appropriate administrative, technical, organizational and physical security measures designed to protect Customer Data against unauthorized access, disclosure and loss.
+
+
+
+B.            Deletion of Data. Upon termination of [the CLIENT AGREEMENT] or [this Agreement], [CLIENT] may request deletion of the Customer Data. To the extent the Customer Data is in [CUSTOMER]’s possession, custody, or control, [CUSTOMER] will perform such deletion within ninety (90) days and where requested by [CLIENT], certify the same in writing. To the extent the Customer Data is in AppTech’s possession, custody, or control, [CUSTOMER] will communicate such request to AppTech.
+
+
+
+3.             Client Commitments. Customer shall require each Client to commit to the following obligations in each Client Agreement:
+
+
+
+A.            Compliance with Applicable Law. [CLIENT] will comply with all Applicable Laws in connection with the use of the AppTech Services, including the provision of the Customer Data to [CUSTOMER].
+
+
+
+
+
+
+
+ 	17
+
+
+
+
+B.            Client Responsibilities. [CLIENT] will use the AppTech Services only: (i) for the purpose of transacting BaaS, PaaS, CXS business and any other future developments on the AppTech Platform; (ii) in accordance with the terms of this Agreement and the Ts & Cs; and (iii) in compliance with Applicable Laws and any contractual or other obligation [CLIENT] has to any third party. [CLIENT] is solely responsible for ensuring that its use of the AppTech Services, including its provision of the Customer Data and use of Analytical Results, does not violate any Applicable Laws. [CLIENT] is solely responsible for any actions or decisions it makes in connection with its use of the AppTech Services and AppTech does not assume any responsibility or liability for such actions or decisions.
+
+
+
+C.            Usage Restrictions. [CLIENT] shall not provide to [CUSTOMER] any Customer Data that contains Sensitive Personal Information. [CLIENT] shall not use the AppTech Platform or Services for any purposes not contemplated by this Agreement, including but not limited to purposes prohibited under the Fair Credit Reporting Act (FCRA) and the Equal Credit Opportunity Act (ECOA), such as for background checks, as a factor in establishing an individual’s creditworthiness or eligibility for credit, insurance, housing, or employment, or in any way that facilitates discrimination, or in any other way that may violate or may cause [CLIENT], [CUSTOMER], or AppTech to violate any Applicable Laws. For clarity, the foregoing limitations apply to the Analytical Results and any other information derived from use of the AppTech Services, as well as the AppTech Service itself.
+
+
+
+D.            IMPORTANT FCRA RESTRICTIONS. [CLIENT] acknowledges that AppTech is not a consumer-reporting agency ("Consumer Reporting Agency") as defined by the Fair Credit Reporting Act, 15 U.S.C. § 1681 et seq. ("FCRA") and the Analytical Results do not constitute “Consumer Reports”, as that term is defined in the FCRA. Customer will not use the AppTech Services (including the Analytical Results) for any purposes enumerated in the FCRA in lieu of obtaining a Consumer Report. In particular, [CLIENT] will not use the AppTech Services (including the Analytical Results): (i) in connection with establishing a consumer’s (as such term is defined in the FCRA) eligibility for credit or insurance to be used primarily for personal, family or household purposes, or in connection with assessing risks associated with existing credit obligations of a consumer; (ii) for the purpose of evaluating a consumer for employment, promotion, reassignment or retention as an employee; (iii) for any tenancy verification or in connection with any application to rent real property; (iv) in connection with a determination of a consumer’s eligibility for a license or other benefit that depends on an applicant's financial responsibility or status; (v) as a potential investor or servicer, or current insurer, in connection with a valuation of, or assessment of credit or prepayment risks associated with, an existing credit obligation; (vi) in connection with any information, service or product sold or delivered to a Consumer that constitutes or is derived in substantial part from a Consumer Report; or (vii) for any other purpose under the FCRA. [CLIENT] also will not use the AppTech Platform and AppTech Services for the preparation of a Consumer Report or in such a manner that may cause such any resulting data to be characterized as a Consumer Report. [CLIENT] agrees that it will not take any “Adverse Action” (as that term is defined in the FCRA), which is based in whole or in part on the AppTech Platform and AppTech Services against any Consumer.
+
+
+
+E.             Data, Privacy Notice and Consent. [CLIENT] is responsible for the accuracy of Customer Data that it transfers to [CUSTOMER] and shall ensure it has the right to transfer (or provide or authorize access to) Customer Data for the purposes contemplated in this Agreement (and has obtained any necessary consents or authorizations to do so). [CLIENT] will include on each [CLIENT] service and digital application or property (e.g., webpages, apps, endpoints) from which it collects Customer Data a readily accessible privacy policy that includes accurate disclosures concerning the processing activities undertaken in connection with this Agreement that complies with Applicable Laws, including: (i) the collection and processing of Customer Data for the purposes contemplated by this Agreement; (ii) the disclosure of Customer Data to [CUSTOMER] and AppTech detection and prevention of fraud, security threats or other illegal or malicious behavior or if applicable, for managing disputes (with a link to the AppTech Privacy Notice); and (iii) if applicable, the use of Snippets to collect and use Customer Data as described in this Agreement. For clarity, as between the parties, [CLIENT] is solely responsible for obtaining any necessary consents, permissions and approvals from and providing any notices to End Users required by Applicable Laws and this Agreement in connection with the activities described in this Agreement. The parties will provide reasonable assistance and reasonably cooperate with each other to assist with each party's compliance with Applicable Laws and this Section.
+
+
+
+F.             Due Diligence and Remedial Action. [CLIENT] will cooperate with [CUSTOMER] in conducting reasonable due diligence into any complaint [CLIENT] or [CUSTOMER] receives relating to the use of the AppTech Services, including with respect to any decisions made based on the AppTech Services. [CLIENT] will cooperate with [CUSTOMER] to ensure appropriate action is taken in response to such complaints.
+
+
+
+
+
+* * * * * * * * * * * *
+
+
+
+
+
+ 	18
+
+
+
+
+Exhibit D
+
+
+
+AppTech Platform and Services Overview
+
+
+
+As it relates to the Customer’s Clients and Sub-Clients (“Merchants”), Affiliates and End Users, this Exhibit aims to provide the Customer with a deeper, more comprehensive view and understanding of AppTech’s Commerse™ Platform (the “Platform”) and the underlying technologies and services associated with use of the Platform and its extended capabilities via Application Programming Interfaces (“APIs”) and Applications associated with the Platform.
+
+
+
+
+
+1.             The Platform.
+
+
+
+A.            General Overview. The Platform powers AppTech’s Payments-as-a-Service (“PaaS”), Banking-as-a-Service (“BaaS”) and Commerce-Experiences-as- a-Service (“CXS”) capabilities including, but not limited to Text-to-Pay (“T2P”), and contactless payments to digital bank accounts, and virtual card issuance. The Platform runs on Amazon Web Services (“AWS”) and Microsoft Azure (“Azure”) – both world leading, on-demand cloud computing platforms that offer distributed computing processing capacity and software tools.
+
+
+
+2.             The APIs.
+
+
+
+A.            General Overview. The APIs are a set of instructions and methods that allow independent software vendors (“ISVs”) and other third-party solution providers to programmatically interface and integrate with AppTech’s omni-channel commerce solutions. These APIs enable the features and functionality of the Platform to be seamlessly extended into your application and customer experience. The APIs are a combination of capabilities offered by AppTech and AppTech’s strategic partners.
+
+
+
+B.            Use & Application. Your use of the APIs may be subject to additional costs, licensing agreements and/or AppTech specific policies and terms & conditions (which shall prevail in relation to your use of the API). You may not access or use the API in any way that could cause damage to AppTech, to or in the Platform, its customers, or in contravention of any Applicable Laws. We reserve the right in our sole discretion, to: (i) update any API from time to time; (ii) place limitations around your use of any API; and (iii) deny your access to any API in the event of misuse by you or to otherwise protect AppTech’s legitimate interests.
+
+
+
+
+
+3.             Commerse Applications (the “Software”)
+
+
+
+A.            General Overview. The Platform powers a suite of interconnected software applications (the “Software”) for the enablement of seamless commerce experiences. The three primary Fintech-centric pillars of Software are delivered as Software-as-a-Service (“SaaS”) offerings that include PAAS, BAAS, and CXS.
+
+
+
+B.             Unified Portals. From a business perspective, the Software is presented as a unified, cloud-based portal (“Unified Portal”) that includes access and functionality specific to Merchants, Partners and Affiliates. Major features and components of the Unified Portal include (1) Merchant and End-User onboarding, (2) B2C and B2B payments, banking and other commerce oriented-transaction management, (3) a CRM (4) compliance, reporting and analytical tools. A commission tracking and payouts module is available to select Partners, Affiliates and Sub-Affiliates who have entered into a business relationship with AppTech.
+
+
+
+C.            PaaS. The PaaS offering enables pay-in capabilities including card present and card not present payment processing, including but not limited to e-commerce (ex. hosted and embedded checkouts) contactless payments (ex. NFC, Bluetooth, QR) Text-to-Pay, Traditional merchant services are available for credit, debit, ACH and real-time payments (“RTP”).
+
+
+
+
+
+
+
+ 	19
+
+
+
+
+D.            BaaS. The BaaS offering delivers digital banking and financial services to consumers and institutions. This includes enabling virtual card issuance (ex. Visa and Mastercard); virtual accounts, FDIC Insured, account to account transfers, closed loop networks, open loop networks, advanced account funding and settlement; AML, fraud, and transactional tools to meet regulatory obligations.
+
+
+
+E.            CXS. The CXS offering combines features from PaaS, BaaS, and omni-channel commerce experiences. These SaaS-powered commerce experiences, including but not limited to e-commerce checkouts, mobile order and pay apps, contactless payments, Peer-to-Peer (“P2P”) remittance, online banking, integrated with payment capabilities, all of which can be right-sized to the business and their use cases.
+
+
+
+
+
+* * * * * * * * * * * *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	20
+
+
+
+
+Exhibit E
+
+
+
+AppTech Approach to Technical Support
+
+
+
+The following is a description of the technical support model that AppTech employs and implements as it relates to the AppTech Platform, Software and Services. AppTech is a Business-to-Business (“B2B”) entity operator and does not engage directly with End Users, Affiliates or Customers’ Clients in a technical support capacity. AppTech performs Tier 3 technical support directly (and only) to AppTech’s direct Customer as defined in the Agreement. Tier Definitions are outlined below:
+
+
+
+1.              Tier 1 Technical Support and End User Customer Service. (AppTech Does provide)
+
+
+
+A.            Program
+
+
+
+i.                Typically, a Tier 1 (“T1”) technical support program (a “T1 Program”) interfaces directly with consumer grade End Users and is facilitated through a contact or call center engagement or environment.
+
+
+
+ii.                 Issues typically covered by a T1 Program model include but are not limited to: End User Account and access issues, End User troubleshooting at the application interface level, low level training and facilitation of End User interface challenges, End User misunderstandings and low-level End User issue resolution.
+
+
+
+B.            Policies. AppTech maintains no policies as it pertains to T1 Program handling and does not include any type of T1 Support mechanisms as part of the Agreement. Customer understands that where Customer’s Clients, Affiliates and End Users technical support needs are concerned, that this is a Customer responsibility. Further, Customer understands that escalations of T1 technical support items are not handled by AppTech and that Customer is expected to handle T1 escalations and Tier 2 (“T2”) Issue handling at the front lines of its business and go-to-market approach.
+
+
+
+2.              Tier 2 Technical Support and End User Customer Service. (AppTech Does provide)
+
+
+
+A.            Program.
+
+
+
+i.                Typically, a T2 Technical Support program (a “T2 Program”) interfaces directly with consumer grade End Users and is facilitated through a contact or call center engagement or environment, in which T1 issue resolution that cannot be resolved by a T1 agent is then escalated to a T2 agent representative or technical contact or call center manager for review and resolve.
+
+
+
+ii.                Issues typically covered by a T2 Program model include but are not limited to more complex End User Account and access issues, end user troubleshooting at the application interface level, minor system state and End User equipment reviews along with minor reverse engineering and escalated technical troubleshooting of an issue to determine if it is a bug, design flaw, product deficit or product enhancement issue. If it is determined to be a replicability issue identified as a “bug” or “design-flaw” that cannot be resolved at the T2 level, it is then documented, groomed and prepared for a Tier 3 (“T3”) escalation and review.
+
+
+
+iii.               In the event that a T2 issue is potentially being groomed for escalation to T3, it is the sole responsibility of the Customer to respond accordingly to its Client, Affiliate or End User that submitted the original case for review and to let them know that the issue has been identified as a potential escalated T3 issue and that an immediate resolution is not available.
+
+
+
+
+
+
+
+ 	21
+
+
+
+
+B.            Policies. AppTech maintains no policies as it pertains to T2 technical support handling and does not include any type of T2 Program mechanisms as part of the Agreement. Customer understands that where its Clients, Affiliates and End Users technical support needs are concerned, that this is a Customer responsibility. Further, Customer understands that escalations of T2 technical support items will be reviewed by AppTech through the T3 Program model and may or may not be escalated for remediation. See T3 Program model below for further understanding of approach, potential service level agreements and vehicles for submission of T3 technical support items.
+
+
+
+3.            Tier 3 Technical Support
+
+
+
+A.            Program.
+
+
+
+i.                Typically, a T3 Technical Support program (a “T3 Program”) is a closed loop escalation process between an OEM or Service Provider and its direct Customer under the general terms of the Agreement or subsequent agreements, order forms or addenda. An OEM is defined as an Original Equipment Manufacturer and a Service Provider in this scenario is defined as a Software as a Service provider. In this case, AppTech is the Service Provider for the Customer as defined in this Agreement. AppTech shall maintain contact centers or call centers and is not equipped to handle the volumes of potential cases that these entities provide services for.
+
+
+
+ii.                Issues typically covered by a T3 Program model include validated and replicate- able Product, Software, or Platform bugs that are not associated with End User error or misunderstanding of the Product, Software, or AppTech Platform. Additionally, verifiable, replicateable and core feature functionality flaws or interface issues that prevent execution of core functions can be described as a T3 Program issue. These are issues that only Platform and Software Developers from the AppTech side can resolve through the case submission and support escalation process as defined here in section (iii) below.
+
+
+
+iii.               In the event that a T3 issue is identified in the T1/T2 Customer support process as detailed above, Customer as defined in this Agreement will have the option to submit a case through an online case submission form housed at a defined URL provided only to the Customer upon delivery of the Platform, Software and Services outlined as part of this Agreement. Customer shall not forward, share or disseminate this support portal link in any way, shape or form to any entity outside of the Customer as defined in this Agreement.
+
+
+
+B.            Policies. AppTech maintains a T3 policy and procedure intended to support the Customer as defined in this Agreement as term of this Agreement. Customer understands that where its Clients, Affiliates and End Users technical support needs and communications are concerned, that this is a Customer responsibility. AppTech will not engage in a Technical Support or Customer support capacity with Customer’s Clients, Affiliates, or End Users in the resolution of technical issues. AppTech will only engage directly with Customer as defined in this Agreement. T3 support is intended as a 1-1 interaction between AppTech and the Customer as defined in this Agreement. Depending upon the terms of your Strategic Partner Agreement, upon delivery of the Software, AppTech Platform and AppTech Services, Customer may be given an AppTech Customer success manager (a “Success Manager”) point of contact along with the specific URL for T3 case submissions and escalations. Unless otherwise defined in the Strategic Partner Agreement, AppTech does not provide a specific SLA for T3 escalation resolution through this Agreement as each escalated case is unique and requires development review prior to any time or service level commitments on resolution. Customer understands that not all T3 submissions will take a priority status and that all work related to a T3 resolution is subject to review against the broader backlog of items in the development queue. AppTech will make its best effort to resolve T3 issues in a reasonable timeframe based on a number of submission criteria. Customer understands that the more complete a T3 escalation description is, the better AppTech will be able to evaluate and provide an estimate of delivery resolution. If assigned as such, Customer will work through its Success Manager in the event a submission is under further review.
+
+
+
+
+
+
+
+ 	22
+
+
+
+
+Exhibit F
+
+
+
+Statement of Work
+
+
+
+AppTech will build, develop, launch, and manage a mobile-to-mobile payment system for the Customer.
+
+
+
+This payment system will facilitate transactions between business to business, consumer to business and consumer to consumer also known as “P2P” or person to person remittance.
+
+
+
+The following are items included in the payment system:
+
+
+
+1.	Virtual Bank Account Set up for the Customer and sub-accounts;
+2.	Virtual Card and Physical Debit Card Set up with Visa/MasterCard BIN Sponsorship;
+3.	Mobile Application (made available in Google Play and Apple iTunes store);
+4.	Web Based Application; and
+5.	Ability to transact P2P.
+
+
+The following steps will occur following the execution of this Agreement:
+
+
+
+1.	AppTech will select a banking solution provider;
+2.	AppTech will design database and the mobile payment experiences;
+3.	AppTech is the developer of record on Apple iTunes and Google Play Store;
+4.	AppTech will provide full customer support to the Customer and Customer’s clients;
+5.	AppTech will provide Customer with best practices, compliance with regulatory requirements; and
+6.	AppTech will propose a pricing model for mobile payment services competitive to the market and to be approved by Customer.
+
+
+Additionally, AppTech and Customer will work to complete the following phases to ensure successful launch of product within a reasonable timeframe to be mutually agreed upon by AppTech and Customer:
+
+
+
+Phase 1: High level requirements;
+
+Phase 2: User stories;
+
+Phase 3: User interface design;
+
+Phase 4: Coding – Development; and
+
+Phase 5: Commercial Launch of Product.
+
+
+
+The work described above represents a general description and the Parties will work in good faith to provide additional specifications if necessary pursuant to Section 2Fi in the Agreement.
+
+
+
+* * * * * * * * * *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 	23
+
+
+
+
+Exhibit G
+
+
+
+Pricing
+
+
+
+Subject to the terms of the Agreement, Customer shall pay the following Fees:
+
+
+
+1. Initial payment of $[***] U.S. Dollars for the AppTech Services and the Development Services, to be paid within thirty (30) days following the Effective Date. Notwithstanding anything to the contrary in this Agreement, such initial payment is not credited towards any future invoices or other payment obligations.
+
+
+
+2. Annual payment for the license granted under Section 3H (the “License Fee”) equal to the following:
+
+
+
+i. $250,000.00, to be paid within thirty (30) days following the Effective Date;
+
+
+
+ii. $1,000,000, to be paid within thirty (30) days following the second (2nd), third (3rd), fourth (4th) and fifth (5th) anniversary of the Effective Date.
+
+
+
+iii. For each subsequent anniversary of the Effective Date commencing with the sixth (6th) anniversary of the Effective Date (each an “Anniversary Period”), an amount equal to the greater of $1,000,000 and the total Transaction Fees (as defined below) paid to AppTech for the Anniversary Period immediately prior to the Anniversary Period in which the License Fee is due. All Licensing Fees for these Anniversary Periods will be paid within thirty (30) days following the date of such Anniversary Period.
+
+
+
+3. Subject to Sections 2Fiii, iv and v of the Agreement, upon completion and delivery of the following phases of the Development Services, Client shall pay the following Fees to AppTech within thirty (30) days of delivery of such phases of the Development Services:
+
+
+
+Phases	Action items	Invoice (U.S. Dollars)
+1	High Level Requirements	$[***]
+2	User Stories	$[***]
+3	User Interface Design (mobile and web)	$[***]
+4	Coding/Development	$[***]
+5	Commercial launch into Google Play and Apple iTunes store	$[***]
+
+
+4. AppTech will provide ongoing customer support for the Customer post Commercial launch after Phase 5, AppTech will invoice for the first quarter in advance and the Customer’s Clients at a rate of $[***] per hour to start. The Customer will be invoiced three (3) months in advance in blocks of [***] hours per week (i.e., [***] hours per month), which will result in a monthly Fee of $[***] per month or $[***] per quarter. Within fifteen days following the end of each quarter, AppTech will provide Customer with a statement describing any customer support provided by AppTech in excess of [***] hours for the quarter (the “Excess Customer Support Hours”) and the aggregate dollar amount for such excess customer support hours (the “Excess Customer Support Fees”). Customer will pay the Excess Customer Support Fees within thirty days of receipt of such statement.
+
+
+
+5. Customer shall issue to AppTech the number of shares of Customer’s preferred stock equal to seven percent (7%) of Customer’s total fully diluted capital stock (including options, warrants and other convertible securities) as of the Effective Date. Within five (5) days following the Effective Date, Customer shall provide AppTech all documentation necessary to reflect such stock issuance. In the event Customer has more than one class of preferred stock authorized, Customer shall issue to AppTech such class of preferred stock with rights and preferences most favorable to shareholders.
+
+
+
+
+
+
+
+ 	24
+
+
+
+
+6. All third party charges, including but not limited to: fees for Bank/BIN Sponsor, Card Association, and network fees, fines and penalties, BIN non-usage fees, gateway fees, usage fees, card fees, activity fees, miscellaneous fees, deposit and general account fees,  other fees, telecom fees, transaction monitoring, oversight and compliance management,  BSA/AML checks, legal fees, etc. are the responsibility of the Customer and will be billed as pass-through expenses.
+
+
+
+7. Notwithstanding, interchange fees and charges will be assessed at the then going public rate published in the Card Association Rules or payment network rules. AppTech is entitled to $[***] per transaction and $[***] per dollar of any Card Associations discounts and rebates or incentives of the Customer's programs (the “Transaction Fees”).
+
+
+
+All Fees under this Exhibit G are payable by transfer of immediately available funds in accordance with the wire transfer instructions provided in writing by AppTech to Customer.
+
+
