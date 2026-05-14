@@ -1,0 +1,714 @@
+EX-10.1 2 f10q0918ex10-1_borqs.htm MASTER SERVICES AGREEMENT FOR SOFTWARE DEVELOPMENT, DATED FEBRUARY 8, 2018, BY AND BETWEEN CLOUDMINDS (HONG KONG) LTD. AND BORQS HONG KONG LIMITED
+Exhibit 10.1
+
+
+
+MASTER SERVICES AGREEMENT FOR SOFTWARE DEVELOPMENT
+
+
+
+This Master Services Agreement for Software Development (“MSA”) is entered into as of February 8,h, 2018 (the “Effective Date”) by and between Cloudminds (Hong Kong) Ltd., a Hong Kong corporation whose principal place of business is 10/F, MassMutual Tower, 33 Lockhart Road, Wan Chai, Room 11112, Hong Kong (“CloudMinds”) and Borqs Hong Kong Limited, address Office B 21/F, Legend Tower, 7 Shing Yip St, Kwun Tong, Kowloon, Hong Kong (“Company”).
+
+
+
+As used in this MSA, the term “Party” shall individually mean Company or CloudMinds, and the term “Parties” shall collectively mean Company and CloudMinds.
+
+
+
+WHEREAS, is in the business of software development and engineering services; and
+
+
+
+WHEREAS, CloudMinds desires to contract with Company for engineering services of software development, customization, integration, and testing (as defined below) for CloudMinds’ deployment of a Product(s) (as defined below) related to the projects described in SOWs (“Project”) and for any future projects that may be mutually agreed to in writing by the parties.
+
+
+
+NOW THEREFORE, in consideration of the mutual covenants herein contained, the Parties hereto agree as follows:
+
+
+
+1.	DEFINITIONS
+
+
+1.1.	“Affiliate(s)” means any other entity controlled by, controlling, or under control with a Party. For purposes of this definition “control” shall mean the direct or indirect ownership of fifty (50) percent or more of the shares or interests which are entitled to vote for the directors of an entity or the equivalent, for as long as such entitlement subsists, or which mean equivalent power over management of an entity.
+
+
+1.2.	“Product(s)” means a CloudMinds product that incorporates the Deliverable(s) and which is ready for manufacture in mass production or for delivery in volumes.
+
+
+1.3.	“Deliverable(s)” means any tangible work, including but not limited to Software and Results of Development, provided or to be provided to CloudMinds by Company as defined in an SOW.
+
+
+1.4.	“Developed Software” means the software code and application components of Deliverables, including, but not limited to, the main CPU and other chipset baseline software for Android products as modified by Company in accordance with the agreed-upon Project scope between Company and CloudMinds. This includes IP belonging to CloudMinds, IP belonging to Company and IF jointly owned by CloudMinds and the Company.
+
+
+1.5.	“Enhanced Software” means the software code and application components of Deliverables of “Developed Software”, which excludes the reference baseline software originally provided by main CPU and other chipset providers.
+
+
+1.6.	“Essential Patents” shall mean patents the use or infringement of which cannot be avoided in the course of designing, manufacturing, marketing or usage of the Deliverables that are compliant with the industry standards which GSM, GPRS, CDMA/CDMA2000, UMTS, W-CDMA, LTE and other similar manufacturers have declared to the 3GPP/3GPP2 or similar consortiums via their respective organization partners (including but not limited to European Technical Standards Institute, Alliance for Telecommunication Industry Solutions, Association of Radio Industries and Businesses, China Communication Standards Association, Telecommunication Technology Association, Telecommunication Technology Committee, International Telecommunication Union, Telecommunication Industry Association, Federal Communications Commission, Wi-Fi Alliance) as being essential for GSM/CDMA/3G/4G/Wi-Fi standards; and 2) the essential license for Google Android Operating System and Applications from Google Inc.
+
+
+
+
+
+
+
+
+1.7.	“Intellectual Property” or “IF’ means any idea, concept, know how, technique, invention, creation,
+
+
+1.8.	discovery, works of authorship, document, product, system, practice, procedure, means, method, design, device, program, software, software library, software API’s, content, varieties, drawings and sketches, and trade secrets, improvements, information, Deliverable, Product(s), materials and so on capable of being protected or in the process of being protected or protected as patents, trademarks, trade names, trade dresses copyrights, utility models, designs, chip topography, trade secrets and other types of Intellectual Property.
+
+
+1.9.	“Milestones” means the milestones and their acceptance criteria for the various phases of development as further defined in the respective SOW.
+
+
+1.10.	“PRD” means the product requirements document provided by CloudMinds containing the technical and feature requirements which will form the basis for the development of the Deliverables hereunder and which may include hardware, software, mechanical, appearance, quality, and reliability descriptions.
+
+
+1.11.	“Services” means any and all services provided by Company and delivered to CloudMinds as set forth in each SOW.
+
+
+1.12.	“Results of Development” means all materials, in whatever form, generated by Company in accordance with Specifications, a PRD, or an SOW and/or forming part of the Deliverable and/or any other development made by Company as part of the Services for CloudMinds under this MSA, including but not limited to Developed Software, software libraries, software API’s, software code, software program modules (if any) or any part thereof, (including comments and procedural code such as job control language and scripts to control compilation and installation) and/or object code, netlists, scripts, full test results from all executed testing, test benches, test vectors, operator test scripts, stability test fixtures and/or jigs, algorithms, drawings, changes, applications, reports, as well as any other materials, media and documentation, which shall be prepared, written and/or developed and delivered by Company as part of the Services under this MSA.
+
+
+1.13.	“Specifications” means the technical, feature, and functional requirements for the Deliverables, including Developed Software, as applicable and as set forth in the applicable SOW, or as otherwise agreed in writing by the parties, including a PRD. Such Specifications may be amended from time to time by written agreement of the parties. The term “Specifications” means the latest operative version as agreed upon in writing.
+
+
+1.14.	“Statement(s) of Work” or “SOW(s)” means a document formally appended hereto as an exhibit for any Project, specifying the Services to be performed by Company and Deliverables to be delivered by Company thereunder, in substantially the form set forth in exhibits. Additions or modifications may be made to each applicable SOW, which must thereafter be recorded as an exhibit to this MSA for any Project. For avoidance of doubt, a “Statement of Work” or “SOW” will not to be recognized as effective until it has been appended to this MSA or agreed by both Parties in writing from time to time.
+
+
+2
+
+
+
+
+
+2.	SPECIFICATIONS
+
+
+2.1.	The Services, SOW(s) and Specifications may be amended during the course of development pursuant to Article 4 (“Change Management”) of this MSA. Market areas in which CloudMinds will distribute and sell Product(s) and all regulatory requirements with which the Deliverables will be bound to comply will be defined in a Statement of Work.
+
+
+(1)	CloudMinds will provide the Specifications to Company for review and study prior to commencement of Services with respect to a Deliverable.
+
+
+(2)	Company will determine the technical feasibility of the Specifications and either agree to them in writing and develop the Deliverable on the basis of such Specifications or discuss suggested modifications with CloudMinds. Once the Specifications are approved by CloudMinds, the parties will mutually document the latest Specifications in writing.
+
+
+(3)	CloudMinds will provide a list of all mandatory regulatory and certification requirements in the US for the Product(s). As part of the Specifications, Company shall develop the Deliverables in accordance with these regulatory and certification requirements. If CloudMinds adds regulatory and certification requirements beyond those listed in exhibit(s) or the applicable Statement of Work, such requirements shall be deemed a change requested by CloudMinds and shall be subject to the Change Management procedures.
+
+
+(4)	If a discrepancy between the various Specifications is detected, the Parties will negotiate in good faith to decide which Specification will prevail, after taking into account the practices and requirements which Company applies in its internal Deliverable development.
+
+
+(5)	Integration Services of all Developed Software including third-party Intellectual Property is the responsibility of Company, no matter that such IF has been (i) specified by CloudMinds in the Specifications and/or applicable Statement of Work or (ii) selected independently by Company for inclusion in the Deliverables. Company shall be responsible for the performance of any third-party’s Software or other technology subject to this MSA.
+
+
+(6)	In no event will Company incorporate into any Deliverable any software code licensed under the GNU GPL or LGPL license or any “open source” license without the prior written consent of CloudMinds. Company shall not cause any Deliverable to become subject to any license obligation under the GPL or LGPL license or any “open source” license.
+
+
+3.	STATEMENT OF WORKS
+
+
+3.1.	The Parties shall agree to an SOW which will describe the requirements and responsibilities for the Deliverables and Services. The SOW will be reviewed and signed by both parties from time to time. Each SOW will contain, but not be limited to:
+
+
+(i)	a Project delivery plan;
+
+
+(ii)	Reference to the specification document;
+
+
+3
+
+
+
+
+
+(iii)	a communication plan;
+
+
+(iv)	Milestones;
+
+
+(v)	a full description of the Deliverable(s);
+
+
+(vi)	a full description of any other deliverables to be developed;
+
+
+(vii)	the price to be paid to Company by CloudMinds for the work described in the SOW, along with benchmarks and Milestones to be met in the event of partial payments;
+
+
+(viii)	a list of all third-party Intellectual Property specified by CloudMinds that may be used in the development of the Deliverable(s);
+
+
+(ix)	Company-provided details of licensed elements/parts of the Deliverable that are required for development (including without limitation, third-party technology and Intellectual Property and Company’s pre-existing technology and Intellectual Property);
+
+
+(x)	any general terms defining the Parties’ expectations regarding Development; and
+
+
+(xi)	Each party’s specific responsibilities, tasks, and duties related to the Services.
+
+
+3.2.	Technical Training. Company will provide technical training, at such times and places mutually agreed to by the Parties, to CloudMinds personnel to enable them to test and program the Deliverables. Company will provide service training at such times and places mutually agreed to by the Parties, to CloudMinds technical personnel to enable them to teach service and repair of Product(s) to technical service personnel. Fees for such activities will be as set forth in the applicable Statement of Work.
+
+
+4.	CHANGE MANAGEMENT PROCEDURE
+
+
+4.1.	Change Proposals. CloudMinds may from time to time request or Company may from time to time propose changes to the Deliverables, Services, Specifications, Time Schedule, Milestones, and/or CloudMinds’ other express written requirement(s). After receiving such a request from CloudMinds, Company will verify the feasibility of such a change. No change required by CloudMinds will modify this MSA, the Statement of Work, or bind either Party to perform any proposed terms and conditions of a change unless mutually agreed in writing.
+
+
+4.2.	Impact of Change Proposals. Company will advise CloudMinds in writing of the likely impact of any change requested by CloudMinds. Any change to Milestones, fees, NRE (as defined below), and/or otherwise to this MSA or the applicable Statement of Work will be agreed upon in writing by the Parties in accordance with this Change Management procedure. Price changes will be implemented using the same pricing principles and price levels as originally agreed in the applicable Statement of Work
+
+
+4.3.	Changes After Testing. Changes made by CloudMinds after the start of certification testing will be according to the Change Management procedure set forth in the Statement of Work.
+
+
+4
+
+
+
+
+
+5.	Type Approval and Product Certification
+
+
+5.1.	General. Company shall deliver the Deliverable(s) in substantial conformity to the Specifications and shall support CloudMinds in pre-certification activities, as mutually agreed upon by the Parties, in CloudMinds’ application of any type approvals and certificates needed for distribution and sales of the Product(s) in market areas set forth in the applicable SOW or otherwise expressly set forth in this MSA. Parties’ responsibilities for the required type approval and certification testing may be further defined in the applicable SOW. If CloudMinds requires additional certification or type approvals other than as agreed in the Statement of Work, CloudMinds will pay for any additional prototypes, testing Services, -certification Services, and other related costs as subject to the issuance by CloudMinds of a formal purchase order therefor.
+
+
+5.2.	Certifications. For the purposes of this paragraph, “Industry Certification(s)” means that the Product(s) passes the set of requirements defined by industry standards related to the smartphone ecosystem such as 3GPP, and “Regulatory Certification” means that the Product(s) passes the set of requirements defined by governmental organizations for smartphone devices operating in their area of regulation. Unless the Parties agree otherwise in SOW(s) and this MSA, CloudMinds shall be responsible for acquiring related Certifications.
+
+
+6.	FINAL ACCEPTANCE
+
+
+6.1.	Definition. For purposes of this MSA, “Final Acceptance” shall mean that (i) all tasks defined in an SOW have been completed. (ii) Deliverables (including relevant documentation) have been delivered to CloudMinds by Company and. (iii) The Developed Software ( including relevant documentation) have been delivered to CloudMinds by Company and have been accepted by CloudMinds and meet the Specifications and the agreed acceptance criteria specified in the SOW(s), including all needed type approval certifications, and carrier/customer acceptance and ship approvals per the final carrier’s/customer’s written requirements. In carriers’ written requirements, these may be referred to as Ship Acceptance.
+
+
+6.2.	Notification to Start Final Acceptance Review. Company will notify CloudMinds in writing when it has completed its Software development subject to SOW(s) and this MSA and all Deliverables are ready for final acceptance. After receiving the notification and all deliverables, CloudMinds will conduct Final Acceptance testing of the Deliverables within a period no longer than ten (10) business days after the notification (the “Acceptance Period”).
+
+
+6.3.	Notification of Non-Compliance. CloudMinds shall inform Company of any non-compliance with the Acceptance Criteria found during the Acceptance Period. CloudMinds will provide reasonable assistance to Company for retesting Non-compliance Deliverables .
+
+
+6.4.	Notification of Final Acceptance. CloudMinds shall send the notification about the result of Final Acceptance (acceptance or rejection). If CloudMinds refuses the deliverables or part of deliverables, CloudMinds shall give reasonably detailed reasons to Company. Unless any delay caused by Company, in no event such notification shall not be later than ten (10) business days following the end of the Acceptance Period. In the event that CloudMinds does not provide any notification, it shall be regarded that CloudMinds agrees and accepts the completion of the Developed Software.
+
+
+If the Deliverables do not meet the Acceptance Criteria due to reasons attributable to Company, Company shall make the necessary corrections within 5 business days or within any correction period mutually agreed by both parties. After Company complete the correction plan mutually agreed by both parties, the acceptance procedure for the corrected deliverables shall restart subject to Section 6.2-6.4 above and CloudMinds shall test such resubmitted Deliverables in the Acceptance Period.
+
+
+
+5
+
+
+
+
+
+6.5.	Continued Non-Compliance. If CloudMinds detects new errors or non-compliances of the Deliverables after receiving Company’s performed corrections and/or the detected errors and/or non-compliances are still not remedied, CloudMinds will provide written notice of such issues to Company and, thereafter, the procedure as set forth in Section 6.2 above shall be repeated. If any deliverables does not pass the acceptance three times, CloudMinds shall have right to terminate this agreement or such SOW.
+
+
+6.6.	Acceptance with Non-Conformities. The Parties may agree on a case-by-case basis that in spite of minor non-compliance with Acceptance Criteria detected during the tests, CloudMinds may grant Final Acceptance; provided, however, Company shall remedy the non-compliance within a period of time as agreed by the Parties in writing. Such agreement shall be without prejudice to any other rights of CloudMinds.
+
+
+6.7.	Final Acceptance Schedule. Company has responsibility to drive Developed Software development, including integration of third-parties’ components/software for the Deliverables to meet Final Acceptance Criteria in a timely manner in accordance with the Milestones set forth in the applicable SOW(s). If any third-party software vendor fails to meet any schedule or causes testing failure, Company will promptly escalate to CloudMinds and both parties shall make a feasible solution.
+
+
+7.	FEES, QUOTATIONS, AND PAYMENTS
+
+
+7.1.	Fees. Non-recurring Engineering (NRE) fees for any Project would be covered in the applicable exhibits agreed by both parties and will be paid by CloudMinds. Any changes in NRE fees shall be mutually agreed in writing. The prices to be paid for NRE fees are expressed in US Dollars, unless otherwise agreed in writing.
+
+
+(1)	Delivery of Information and a license to make or have the Product(s) made will be made only upon CloudMinds’ full payment of any undisputed NRE, and any outstanding cost and expense incurred during development that are agreed in a SOW.
+
+
+(2)	If CloudMinds enters into an agreement with any third parties for technical support, software, and any other service, CloudMinds will be liable for all related costs.
+
+
+(3)	If CloudMinds requests additional requirements beyond those set forth in the Statement of Work, both Parties shall negotiate in good faith on the impact that such change will have to NRE, fee(s), Milestone(s), and other terms of development, and both parties shall sign an amendment of SOW(s) or this MSA.
+
+
+7.2.	Binding Quotations. All Developed Software related information and the quotations given by Company in an SOW shall be binding on Company unless otherwise mutually agreed in writing on a case-by-case basis by the Parties.
+
+
+7.3.	Expenses. Company shall also bill and CloudMinds shall reimburse Company for all reasonable pre-approved expenses set forth in an applicable SOW.
+
+
+7.4.	Sales Taxes. All amounts payable by CloudMinds to Company under this MSA are inclusive of any value added tax, use, sales, service, or other applicable tax. Each party will be responsible for any and all personal property taxes on property it owns or leases, franchise and privilege taxes on its business, and taxes based on its net income or gross receipts. Company shall pay all sales, use, and other taxes and duties payable by Company on any goods or services used or consumed by Company in providing the Services. Each Party shall comply with the applicable tax laws.
+
+
+6
+
+
+
+
+
+7.5.	Corporate Taxes. Except as set forth above in Section 7.4, each Party shall pay all other taxes (including also taxes based upon its income) and levies imposed on it under applicable laws as a result of its undertakings under this MSA.
+
+
+7.6.	Payment Terms: The payments shall be based on agreed Milestone set forth in SOW(s) and will be paid after each milestone is accepted by CloudMinds. Generally, the payment milestones are linked to the delivery milestones as showed in the table below. Payment will be made within thirty (30) calendar days from the invoice date.
+
+
+Milestones	 	Description	 	Percentage of amount to be paid
+1	 	Signing of the MSA/SOW (the later date will be applied)	 	 	30	%
+2	 	Software feature completion subject to SOW(s)	 	 	30	%
+3	 	Pre homologation start (lab entry)	 	 	20	%
+4	 	Homologation complete (TA)	 	 	20	%
+
+
+8.	WARRANTY AND SOURCE CODE
+
+
+8.1.	General Warranties.
+
+
+Each Party represents and warrants that it has full right, power, and authority to enter into this MSA and to perform its obligations and duties hereunder, and that the performance of such obligations and duties does not and will not conflict with or result in a breach of any other agreements of such Party or any judgment, order, or decree by which such Party is bound. Further, the terms of this MSA have been duly authorized by the requisite corporate action on the part of such Party.
+
+
+
+8.2.	Company Warranties. Company warrants and represents that:
+
+
+(1)	the Deliverables as delivered will materially conform to the Specifications, SOW(s) and other agreed documentation. For avoidance of doubt, integration of 311-party software components and system-level performance of the integrated Developed Software shall be covered by this warranty. Company shall warrants that the warranty made by each Pparty vendor shall be in compliance with Company’s Warranty made herein and, if requested by CloudMinds, Company shall grant a pass-through warranty or assign warranty committed by the 3“1-party vendor to CloudMinds; Provided that any vendor cannot commit the Warranty as agreed by both parties herein, Company shall inform CloudMinds the discrepancy on Warranty terms immediately and get CloudMinds approval before entering any agreement with such vendor.
+
+
+7
+
+
+
+
+
+(2)	the Deliverables, Services and performance by Company of its duties subject to the MSA, SOW(s), and other agreed documentation does not and will not infringe or misappropriate any Intellectual Property rights of any third parties;
+
+
+(3)	the Deliverables will not contain computer viruses, worms, trap doors, time bombs, undocumented passwords, disabling code (which renders such Deliverable unusable until a patch or new password is provided), or any similar mechanism or device which may impair or disable CloudMinds’ Products;
+
+
+(4)	no other person, firm or corporation has been or will be granted any rights in any manner by Company with respect to CloudMinds Intellectual Property rights, either pre-existing or developed hereunder; and
+
+
+(5)	Deliverables have obtained all necessary permissions and licenses for commercial use and subsequent distribution in accordance with this MSA.
+
+
+8.3.	Company Warranty Exclusions. Notwithstanding the foregoing, Company’s warranty under Article 8.2 does not cover:
+
+
+(1)	Product(s) malfunctions and after sales performance issues, the root cause of which is - attributable to CloudMinds’ fault in Product(s) industrialization, material purchasing, manufacturing, and final assembly area;
+
+
+(2)	CloudMinds’ products package and distribution;
+
+
+(3)	Any Deliverable which has been modified without Company’s authorization and/or approval;
+
+
+(4)	Software or hardware design performed by CloudMinds or any third party other than Company and Company’s vendors as appointed in the applicable exhibit(s); or
+
+
+(5)	Any combinations of any Deliverable with any other third-party products (except vendor appointed by Company) unless such combination is allowed in the Specifications, SOW(s) or any other agreed documentation.
+
+
+8.4.	Source Code
+
+
+Source code of the Developed Software (“Source Code”) as part of Deliverables shall be released to CloudMinds at pre-determined intervals subject to Milestone agreed by both parties or upon CloudMinds’ request subject to any obligations Company undertaken with other third party vendoras part of the Deliverables (if CloudMinds agrees with such restriction on Deliverables in advance). At any cost the Source Code MUST NOT be redistributed by CloudMinds to any third-party software provider or Original Designed Manufacturer without explicit approval by Company.
+
+
+
+9.	WARRANTY PERIOD AND TECHNOCAL SUPPORT
+
+
+9.1.	For a period of six (6) months from the date of passing the Final Acceptance (“Warranty Period”), Company will correct any material defects of the Deliverables to ensure Deliverables in conformance with Specifications, SOW(s) or any other agreed documentation at no charge to CloudMinds. The warranty period is for providing the emergency technical support and normal Developed Software maintenance releases for bug corrections of Developed Software provided by Company for Product(s).
+
+
+In the event that CloudMinds demands any emergency technical support or normal maintenance releases for the Developed Softwarebeyond the Warranty Period, both parties will negotiate a separate maintenance and support agreement to cover such services.
+
+
+
+8
+
+
+
+
+
+A breach of warranty must be corrected by Company within the following interval of time, measured from the time when CloudMinds gives Company notice of the breach:
+
+
+
+The cure period:	 	If the breach results from:
+Twenty-four (24) hours
+Errors, malfunctions, or defects, which impair or disable the function of the Product(s)
+
+Five (5) days
+Errors, malfunctions or defects, which limit minor function of the Product(s)
+
+Thirty (30) days	 	Errors, malfunctions, or defects, which do not cause dysfunction of the Product(s)
+
+
+9.2.	DISCLAIMER OF WARRANTIES. OTHER THAN AS EXPRESSLY STATED IN SECTIONS 8 and 9 ABOVE, COMPANY ON BEHALF OF ITSELF, ITS EMPLOYEES AND ITS AFFILIATES DISCLAIMS ALL WARRANTIES WITH REGARD TO THE SERVICES AND DELIVERABLES, AND ANY OTHER INFORMATION OR MATERIAL PROVIDED IN CONNECTION WITH THE PERFORMANCE OF THE SERVICES, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+
+
+10.	INTELLECTUAL PROPERTY AND OTHER RIGHTS
+
+
+10.1.	Third Party Technology and Intellectual Property
+
+
+(1)	CloudMinds and Company have agreed on selected third-party technology and Intellectual Property as set forth in the applicable exhibit(s). Such third-party technology provider(s) can be changed based on development needs, carrier requirements, product requirements, etc.
+
+
+(2)	Company shall not incorporate any third-party IP or technology into Deliverables without (a) CloudMinds’ prior written consent and (b) the prior written agreement between the Parties with respect to (i) which Party will execute any required agreements with such third-party vendors, (ii) which Party will be responsible for payment of the related fees, and (iii) the terms of all necessary licenses to fulfil the terms of this MSA with respect to such technology or IP (“License Agreement with Third Party”). Unless otherwise expressly set forth in the applicable SOW(s), CloudMinds has the responsibility for the execution of License Agreement(s) with Third Party, terms of license, payment of related fees. In the event that such third-party IF is specified in the applicable exhibit(s), Company shall assume responsibility to sign the License Agreement with Third Party for all other third-party IP incorporated in the Deliverables. In the event that the License Agreement with Third Party is signed by Company, Company warrants that the license scope of such software shall be sufficiently broad enough to fulfil the purpose of this MSA and each SOW, and shall not conflict with the rights granted to CloudMinds herein.
+
+
+9
+
+
+
+
+
+10.2.	Intellectual Property Ownership. For purposes of this Section 10.2, references to “CloudMinds” include its Affiliates, where applicable.
+
+
+(1)	Notwithstanding anything to the contrary in this MSA or a related SOW(s), each Party acknowledges that any Intellectual Property exclusively developed, owned, or licensed by either CloudMinds or Company prior to the Effective Date of this MSA shall remain the exclusive property of such Party. However, for any Intellectual Property solely developed by the Company or jointly developed by both parties which is for fulfilling the purpose of this MSA and SOW(s) shall be jointly owned by both Parties. For the avoidance of doubt, CloudMinds retain all right, title and interest with Intellectual Property solely developed by itself, its affiliates, subcontractors within the Effective Period of the MSA.
+
+
+(2)	Any information, description, documentation, design or programs provided by CloudMinds or its Affiliates to Company (“CloudMinds Material”) shall be used only for the purpose of fulfilling its obligations under this MSA. CloudMinds’ provision of such CloudMinds Material does not represent any grant of license or other rights in and to such CloudMinds Material except as expressly set forth herein.
+
+
+(3)	CloudMinds and Company shall jointly own the Developed Software. For avoidance of doubt, CloudMinds-developed Source Code incorporated in the Developed Software is and will continue to be the exclusive property of CloudMinds. Without CloudMinds’ prior written consent, Company shall not use CloudMinds Intellectual Property in any manner other than the purpose of this MSA. For the jointly ownership of Software, CloudMinds (or any successor thereof) shall have full access use of Source code and objective code of the Developed Software subject to this MSA. Without prior consent of the other Party, each Party has right to develop further versions (including but not limited to the right to develop enhancements and derivative works), on a PUEC-free, irrevocable, worldwide basis, with free and clear title, without restrictions except as follows:
+
+
+i.	CloudMinds will not enter into any arrangement whereby the ownership of such Developed Software would be with any entity other than CloudMinds (or its successor) or its affiliates and Company.
+
+
+ii.	A successor to CloudMinds is a company which is a direct competitor to Company in the software consultancy business, in which case, while CloudMinds’s successor will retain ownership rights, further development rights will be subject to new negotiation with Company.
+
+
+(4)	Notwithstanding anything to the countrary, prior to commercialization of the Enhanced Software or variances thereof, CloudMinds will notify Company in writing so that Company may advise of any technical concerns with respect to such products and/or the regions into which such products will be commercialized.
+
+
+(5)	Subject to Company’s confidentiality obligations and CloudMinds’s ownership rights in the related intellectual property of Developed Software, Company acknowledges and agrees to use its knowledge, experience, know-how and/or expertise, whether gained prior to, during or after any Services performed under this MSA, to perform work for third parties including work which results in the creation of materials similar to materials developed for CloudMinds, only in accordance with the exclusivity restrictions set forth in Exhibits hereunder.
+
+
+10
+
+
+
+
+
+(6)	For the purposes of clarification, all right, title, and interest in and to all products, software, and tools used to develop or test the Deliverables and Product(s), including all intellectual property rights therein, shall remain the intellectual property of Company, except when provided by CloudMinds. Company shall return all such CloudMinds-provided materials at CloudMinds’s request.
+
+
+10.3.	License to Distribute. Notwithstanding anything to the contrary herein, if Company embeds any intellectual property of Company (“Company IP”) in any Deliverable, then Company shall use its best efforts to list such Company IP in the applicable Statement of Work. In any event, Company hereby grants to CloudMinds a perpetual, non-transferable, irrevocable, fully paid up, PUEC-free, license to use, offer for sale, sell, and distribute such Company IP with Product(s)s and to grant these rights to its direct and indirect customers and partners throughout the distribution chain and through to end users solely as an embedded component of the Deliverable for use in connection with the operation of the Product(s). CloudMinds shall not, and shall not authorize any third party to: (i) market, sell, lease, rent, sublicense, distribute or otherwise make available to any third party any of the Company IP or any aspect thereof except as expressly authorized under this MSA; (ii) remove or alter any legends or other notices from the Company IP except as previously agreed upon by Company in writing, (iii) reverse engineer, disassemble, decompile or translate into human-readable form or modify, copy or create derivative works of any of the Company IP except as expressly authorized by this MSA and only to the extent that that the Company IP remains and embedded component of the Deliverable only for use in connection with operation of Product.
+
+
+10.4.	Company’s use of CloudMinds IP. CloudMinds hereby grants to Company and its respective Affiliates and subcontractors a non-exclusive, revocable, non-transferable, royalty-free, PUEC-free, worldwide license to access, display, use, reproduce and distribute CloudMinds’ IP only for developing purpose of this MSA Software.
+
+
+10.5.	License for Internal Use. Company will release to CloudMinds all necessary information, including Confidential Information and Source Code regarding all IP related to the Developed Software for CloudMinds, its Affiliates’ and subsidiaries’ internal business use at no charge.
+
+
+11.	CONFIDENTIAL INFORMATION
+
+
+11.1.	Obligations. Each Party acknowledges that it will obtain proprietary or confidential information relating to the subject matter of this MSA from the other Party during the course of its performance under this MSA, as further defined below as Confidential Information. Each Party shall at all times, both during and after the term of this MSA, keep in confidence and trust all such Confidential Information received from the other Party and all Confidential Information including but not limited to information disclosed in a meeting, review, discussion, email and/or research report, and will make no use of any Confidential Information except under the terms of this MSA. Neither Party shall, without the prior written consent of the other, disclose any Confidential Information to anyone but its and its Affiliates’ respective officers, employees, contractors, and legal and financial advisors who have the need to know and have entered into confidentiality agreements sufficient to prohibit further unauthorized use or disclosure by such persons of the Confidential Information.
+
+
+11
+
+
+
+
+
+For the purposes of this MSA, the term “Confidential Information” shall mean information including but not limited to documents, inventions and/or invention disclosures, inventor reports, designs, methods, processes, products, programs, software, data, materials, presentations, business plans, business information, customer information, financial information, compilations and so on that are disclosed by either Party to the other Party and marked confidential or should reasonably be known to the other Party to be confidential.
+
+
+
+11.2.	Exceptions. Information shall not be deemed Confidential Information and the receiving Party shall have no obligation concerning the use or disclosure of any information which (i) is or becomes publicly known through no fault of the receiving Party; (ii) was lawfully known to the receiving Party at the time of disclosure, which knowledge the receiving Party shall have the burden of establishing by clear and convincing evidence; (iii) becomes known to the receiving Party from a third-party source other than the disclosing Party without breach of any agreement between the disclosing Party and such Party; or (iv) was independently developed by the receiving Party without the benefit of the Confidential Information received from the disclosing Party, which independent development the receiving Party shall have the burden of establishing by clear and convincing evidence. Nothing in this MSA shall prevent the receiving Party from disclosing Confidential Information to the extent the receiving Party is legally compelled to do so by any governmental, investigative or judicial agency pursuant to proceedings over which such agency has jurisdiction; provided, however, that prior to any such disclosure, the original receiving Party shall (a) assert the confidential nature of the Confidential Information to the agency; (b) immediately notify the original disclosing Party in writing of the agency’s order or request to disclose; and (c) cooperate fully with the original disclosing Party in its efforts to protect against any such disclosure and/or obtain a protective order narrowing the scope of the compelled disclosure and protecting its confidentiality.
+
+
+11.3.	Prior Non-Disclosure Agreements. This Article 11 shall not affect by any means, any other prior non-disclosure agreement signed by and between both Parties.
+
+
+For the purposes of this MSA, the term “disclosing Party” shall mean the Party disclosing the Confidential Information and “receiving Party” shall mean the Party
+
+
+
+12.	LIMITATION OF LIABILITY
+
+
+Notwithstanding any other provision set forth herein, except for confidentiality obligations set forth in Section 11 and those indemnity obligations set forth in Section 13.2, neither Party shall be liable for any indirect, special, and/or consequential damages, arising out of or in connection with this MSA, whether based upon contract, tort, strict liability, or any other theory of liability and regardless of whether such Party has been advised of the possibility of such damages; provided, however, that the foregoing limitation of liability shall not apply with respect to damages incurred as a result of the gross negligence or willful misconduct of the other Party. Neither Party’s liability shall be greater than the total value of NRE fees and PUEC fees paid or payable hereunder under the applicable SOW.
+
+
+
+12
+
+
+
+
+
+13.	INDEMNITY
+
+
+13.1.	General. Each Party agrees to indemnify, defend and hold the other Party and its Affiliates (including all officers, directors, employees, contractors and agents of the foregoing) harmless from and against any and all damages, liabilities, costs and expenses, including reasonable attorneys’ fees and expenses (collectively “Losses”) to the extent directly or indirectly arising out of, incident to, or resulting from:
+
+
+(1)	a third-party claim of breach by such Party of its warranties, representations, covenants, agreements and obligations under this MSA; or
+
+
+(2)	Such Party’s negligence or willful misconduct.
+
+
+13.2.	Intellectual Property Indemnity.
+
+
+(1)	Subject to Section 9.2, Company agrees to indemnify and hold CloudMinds, its officers, directors, employees, contractors, agents, and Affiliates (collectively “Indemnified Parties”) harmless from and against any expense or loss resulting from any third party claim of infringement of any patent, trademark, copyright, trade secret, mask work right or any other intellectual property right to the extent directly arising as a result of the Indemnified Party’s use, copying or distribution of any Deliverable and will defend, at its own expense including reasonable attorney’s fees, any suit brought against an Indemnified Party alleging any such infringement (a “Company Infringement Claim”). In the event that any Deliverable becomes or in Company’s opinion appears likely to become the subject of a Company Infringement Claim, then Company will either (i) procure for CloudMinds the right to enable CloudMinds to continue to use the Deliverable in question, or (ii) modify or replace the Deliverable in question with non-infringing and functionally equivalent material. If Company is unable to perform in accordance with (i) or (ii) above, Company will refund all amounts paid by CloudMinds for such Deliverables hereunder. The foregoing provisions of Section 13.2 herein state Company’s entire liability and CloudMinds’s exclusive remedies for infringement or misappropriation of third-party Intellectual Property Rights.
+
+
+(2)	Intellectual Property Indemnity for Distributed Product(s). Subject to the liability cap set forth below. Company agrees to reimburse CloudMinds for CloudMinds’s defense cost (include reasonable attorney’s fee) of any claim of infringement of any patent, trademark, copyright, trade secret, mask work right or any other intellectual property right arising as a result of CloudMinds’ use, copying or distribution of Product(s). Further, Company will provide the necessary assistance to CloudMinds for CloudMinds’s defense of any suit brought against CloudMinds alleging any such infringement.
+
+
+(3)	CloudMinds shall indemnify, defend and hold harmless Company, its officers, directors, employees, contractors, agents, and Affiliates (collectively “Indemnified Parties”) harmless from and against any expense or loss resulting from any third party claim of infringement of any third party patent, trademark, copyright, trade secret, mask work right or any other intellectual property right to the extent directly arising as a result of any Product.
+
+
+13.3.	Pre-existing IP Claims. As of the Effective Date of this MSA, CloudMinds represents that certain outstanding IP infringement claims have been filed against it as set forth in Exhibits, attached hereto and incorporated herein by reference. Company hereby warrants that all designs of Developed Software proposed by Company will avoid further possibility of infringement of these outstanding claims.
+
+
+13
+
+
+
+
+
+13.4.	Exclusions. Company shall have no liability for any defence and indemnity obligations pursuant to Section 13.2 to the extent a claim results from:
+
+
+(1)	Use of any version of Developed Software other than a current release made available to CloudMinds in a timely manner pursuant to the terms and conditions of this MSA if such infringement would have been avoided by use of such version;
+
+
+(2)	CloudMinds’ solely designs, instructions, specifications, software and/or requirements if such infringement would have been avoided in the absence of such requirements;
+
+
+(3)	Changes, alteration, modification or misuse of Developded Software is not accordance with Company’s documentation or written instruction and/or change, alter and modifiy software by any party other than Company or its subcontractors;
+
+
+(4)	Combination of Developed Software with any other products, parts, components, devices and/or software which is not furnished or approved by Company is not accordance with Company’s documentation or written instruction;
+
+
+(5)	Any and all third-party software that was specified by CloudMinds in the applicable SOW if such infringement would have been avoided in the absence of such specifications; or
+
+
+(6)	Any Essential Patents.
+
+
+13.5.	Indemnity Procedures. For all claims required by a Party under this Section 13 to indemnify the other Party, the indemnification procedures shall apply, provided that the Indemnified Party: (a) gives the indemnifying Party prompt notice of any claim or suit, provided that any delay or failure of the Indemnified Party to give prompt notice of any such claim shall not affect the rights of the Indemnified Party hereunder unless, and only to the extent that, such delay or failure is prejudicial to or otherwise adversely affects the Indemnifying Party (b) gives the Indemnifying Party sole control of the defense and/or settlement, provided that no compromise or settlement of any claim admitting liability of or imposing duties of performance or that is in any way prejudicial to the Indemnified Party may be effected without the prior written consent of such party, which consent shall not be unreasonably withheld, and (c) reasonably cooperates with the Indemnifying Party on the settlement and/or defense, at the Indemnifying Party’s reasonable expense for out-of-pocket costs incurred by the Indemnified Party in providing any cooperation requested by the Indemnifying Party. Any failure of the Indemnified Party to provide prompt notice of any claim or suit will not obviate the indemnification of the Indemnifying Party provided in this Section 13 unless and to the extent that the Indemnifying Party is materially prejudiced thereby. The Indemnified Party shall have the right to participate in but not to control the defense and/or settlement of any claim covered by this Section 13 with counsel of its own choosing at its own expense. The Indemnifying Party agrees to keep the Indemnified Party regularly and completely informed of the status of any claim hereunder.
+
+
+13.6.	Sole and Exclusive Remedies. The remedies set forth in this Section 13 are each respective Party’s sole and exclusive remedies with respect to infringement claims.
+
+
+14
+
+
+
+
+
+14.	TRADEMARKS AND TRADE NAMES
+
+
+Neither this MSA nor any Statement of Work placed hereunder will be deemed to give either Party any right to use the other Party’s trademarks or any of the other Party’s trade names without such Party’s written consent. Each Party recognizes the other Party’s ownership of and title to their respective trademarks and trade names and the goodwill attached thereto. Each Party agrees not to contest or take any action to contest the trademarks or trade names of the other Party or to use, employ or attempt to register any trademark or trade name that is confusingly similar to the trademarks or trade names of the other Party.
+
+
+
+15.	FORCE MAJEURE
+
+
+15.1.	The performance by either Party of its obligations under this MSA shall be extended by a reasonable period of time if such performance of the respective Party is impeded by an unforeseeable event beyond such Party’s control, which shall include but not be limited to acts of God, industrial actions, riots, wars, embargo or requisition (acts of government), hereinafter referred to as “Force Majeure”.
+
+
+15.2.	In case of Force Majeure, the relevant Party shall promptly notify and furnish the other Party in writing with all relevant information thereto.
+
+
+15.3.	Should an event of Force Majeure continue for more than three (3) months, each Party shall have the right to terminate this MSA, upon written notice.
+
+
+16.	TERM AND TERMINATION
+
+
+16.1.	Term. This MSA shall take effect as of the Effective Date and shall continue in force for a period of three (3) years from that date, and renewable upon mutual agreement communicated to the other party prior to the expiry of the term.
+
+
+16.2.	Termination. Either Party may terminate this MSA immediately upon the occurrence of any of the following events:
+
+
+(1)	The filing by or against the other Party of a petition for reorganization or liquidation under the applicable bankruptcy laws or corresponding laws or procedures of any applicable jurisdiction; or
+
+
+(2)	Insolvency of or filing petition for voluntary liquidation in respect of such other Party, the appointment of a receiver or trustee for such other Party, or the execution by such other Party of an assignment for the benefit or creditors;
+
+
+(3)	Other than restructuring between affiliated companies, any attempted sale, transfer or assignment by such other Party of a substantial part of the equity or assets of such other Party, or of this MSA, or of any of its rights or privileges granted or obligations assumed under this MSA without prior communication and written consent of the other Party and if it is not concerning assets purchased by CloudMinds by paying Development NRE Fee or by explicit payments for equipment, material, samples etc. which therefore are owned by CloudMinds and available to transfer to third parties without consent from or liability to Company; or
+
+
+(4)	The nationalization, expropriation or other taking by any government or any agency of any government of a substantial part of such other Party’s assets or business.
+
+
+(5)	If the other Party is in material breach of any of its obligations under this MSA and, if curable, has failed to remedy such a breach within thirty (30) days after having received written notice of such a breach (“Cure Period”) and the intention of the notifying Party to terminate this MSA if the breach is not remedied within the Cure Period. By way of examples but not limitations, failure to meet deadlines which is not contributed by CloudMinds, failure of Developed Software to conform to Specifications, or failure of Developed Software to meet industry standards will each be considered a material breach of this MSA without cure.
+
+
+15
+
+
+
+
+
+16.3.	Termination for Convenience. At any time prior to the first Product(s) shipment CloudMinds will have the right to terminate this MSA at its convenience upon ten (10) days’ written notice to Company; provided, however, CloudMinds will pay Company the Milestone payment which would have been due were it not for termination. Any PUEC or other benefit which should have been paid to Company for using the Deliverables in any case, will remain payable if any Deliverables are actually used in Product(s)ion or distribution by CloudMinds or any company designated by it.
+
+
+16.4.	Survival. The termination or expiration of this MSA shall not relieve any Party of any obligation or liability accrued hereunder prior to such termination or expiration nor affect or impair the rights of either Party arising under this MSA prior to such termination or expiration, except as expressly provided herein. Provisions relating to Intellectual Property under Article 10, Confidentiality under Article 11, and Indemnification under Article 13 shall survive the expiration or termination of this MSA. In addition, all other obligations which by their nature are intended to survive shall survive termination or expiration of this MSA.
+
+
+16.5.	Effect of Termination. On termination or expiry of this MSA, each Party shall, upon request by the other Party return or destroy all Confidential Information of the requesting Party that is in the possession of the other Party and shall provide a certificate of such destruction to the requesting Party.
+
+
+CloudMinds shall have no liability for any consequential payment or further NRE other than work performed, specific equipment and materials purchased as agreed in an SOW to support development of Developed Software if this MSA is terminated pursuant to this Article 16. All CloudMinds-paid equipment and materials shall be transferred to CloudMinds immediately upon termination of this MSA, at CloudMinds’s expense. All work product produced by Company up to the date of termination of this MSA will become the property of CloudMinds, subject only to CloudMinds’s payment to Company for actual work performed up to the effective date of termination.
+
+
+
+17.	GOVERNING LAW
+
+
+The terms of this MSA and any disputes that may arise, will be governed by the laws of the Hong Kong and by the laws of the Hong Kong without regard to its conflict of laws provisions.
+
+
+
+18.	MISCELLANEOUS
+
+
+18.1.	Notification in Event of Performance Issues. Company agrees to promptly inform CloudMinds in written form of event(s) coming to Company’s attention that reasonably may affect Company’s ability to meet any of its obligations under this MSA or any applicable Statement of Work in a timely manner.
+
+
+18.2.	Disputes. All disputes arising out of or in connection with this agreement except with respect to disputes involving intellectual property (which may be immediately referred to a court of final jurisdiction), including any question regarding its existence, validity or termination, which cannot be settled by an amicable effort between the Parties shall be finally settled by binding arbitration according to the Rules of Hong Kong International Arbitration Center (“Rules”) by one or three arbitrator(s) in accordance with said Rules in Hong Kong. The arbitration proceedings shall be conducted in English.
+
+
+16
+
+
+
+
+
+Nothing contained herein shall be construed and the Parties hereby waive any and all rights they may have to claim or assert that either Party is subject to the jurisdiction of the courts of the country in which Company is located.
+
+
+
+18.3.	Cumulative Remedies. Unless expressly otherwise stated herein, all rights and remedies under this MSA are cumulative and a Party’s exercise of any right or remedy does not affect its other rights or remedies under this MSA.
+
+
+18.4.	Independent Contractors. Nothing herein contained shall be construed to constitute Parties as partners or joint ventures or the agent of the other Party in any sense of those terms whatsoever. Neither Party assumes any liability of, nor shall have any authority to enter into any binding obligation on behalf of, the other Party.
+
+
+18.5.	Severability. In the event that any provision of this MSA conflicts with the law under which this MSA is to be construed or if any such provision is held invalid by a court with jurisdiction over Parties, such a provision shall be deemed to be restated to reflect as nearly as possible the original intentions of Parties in accordance with applicable law. If any term, provision, covenant or condition of this MSA is held invalid or unenforceable for any reason, the parties agree that such invalidity shall not affect the validity of the remaining provisions of this MSA and further agree to substitute for such invalid or unenforceable provision a valid and enforceable provision of similar economic effect. The remainder of this MSA shall remain in full force and affect.
+
+
+18.6.	No Third-Party Beneficiaries. Except as expressly provided herein, this MSA is entered into solely between, and may be enforced only by, CloudMinds and Company. This MSA shall not be deemed to create any rights for third parties, including without limitation employees, and suppliers of a Party, or to create any obligations of a Party to any such third parties.
+
+
+18.7.	Collaboration. Parties shall meet regularly to analyse development results achieved and to take joint action to achieve better results for the benefit of both Parties. The discussions will take place in a collaborative forum consisting of necessary representatives of each Party. Unless otherwise requested by a Party hereto, the discussions shall take place at intervals of one (1) month during Development or upon request of either Party. The discussions shall be held at the premises of CloudMinds or Company or other mutually agreed upon locations or through any other agreed communication channels.
+
+
+18.8.	Notices. All notices and requests, required or authorized by this MSA shall be given in writing and shall be deemed to have been received upon dispatch when sent (i) by facsimile with confirmation of transmission, (ii) by personal same day delivery or (iii) by commercial overnight carrier with written verification of receipt, to the other Party at the address or facsimile number(s) designated below. Either Party may change its address or facsimile number by written notice to the other Party.
+
+
+Notices to Company shall be addressed as follows:
+
+
+
+Address: Tower A, Building B23, Universal Business Park, No. 10 Jiuxianqiao Road, Chaoyang District Beijing, 100015 China
+
+
+
+17
+
+
+
+
+
+Notices to CloudMinds shall be addressed as follows:
+
+
+
+Address: 33F, Unit B, Tower 3, Wangjing SOHO, Wangjing Street No.10, Chaoyang, Beijing, China
+
+
+
+18.9.	Non-Waiver. The failure of either Party at any time to require performance by the other Party of any provision hereof shall not affect in any way the full right to require such performance at any time thereafter; nor shall the waiver by either Party of a breach of any provision hereof be taken or held to be a waiver of the provision itself.
+
+
+18.10.	Attorneys’ Fees. If any dispute arises between Company and CloudMinds with respect to the matters covered by this MSA which leads to a proceeding to resolve such dispute, the prevailing Party in such proceeding shall be entitled to receive its reasonable attorneys’ fees and out-of-pocket costs (including, without limitation, expert witness fees) incurred in connection with such proceeding, in addition to any other relief it may be awarded.
+
+
+18.11.	Publicity. Neither Party shall, without the other Party’s prior written approval make any public announcement or disclosure as to the existence of or matters set forth in this MSA.
+
+
+18.12.	Headings. The paragraph headings in this MSA are solely for convenience and shall not be considered in its interpretation.
+
+
+18.13.	Entire Agreement. This MSA, including the exhibits incorporated as an integral part of this MSA, constitutes the entire agreement of the Parties with respect to the subject matter hereof, and supersedes all previous proposals, oral or written, and all negotiations, conversations or discussions heretofore between the Parties related to this MSA.
+
+
+18.14.	Non-Hire. Neither Party shall, without the prior written consent of a duly authorized officer of the other Party, directly or indirectly solicit, hire or otherwise retain as an employee or independent contractor any current or former employee, consultant, contractor or subcontractor of such other Party, its Affiliates, during the Term of this MSA and for a period of twelve (12) months after Company’s relationship with any such personnel is terminated. Notwithstanding the foregoing, hiring or engaging personnel as a result of a general solicitation through advertising shall not constitute a violation of this provision.
+
+
+18.15.	Data Protection and Privacy. It is the express intention of the parties that neither Party will process any Personal Data on behalf of the other Party under this MSA, where “Personal Data” means any information relating to a natural person who is or can be identified, directly or indirectly, by reference to an identification number or to one or more factors specific to him or her. Nevertheless, should a Party wish to transfer Personal Data to the other Party on its behalf under this MSA, it shall notify such other Party in writing prior to making Personal Data available, and upon written agreement by the receiving Party to such receipt, both Parties shall comply with their respective obligations under applicable laws and regulations in connection therewith.
+
+
+18.16.	Order of Precedence. In the event of any conflict between an SOW and the terms of this MSA, the term and conditions of the SOW shall govern and control but solely with respect to the subject matter thereof. Any preprinted terms on any transactional or other document issued in connection herewith (including, without limitation, purchase orders, RFPs, bills of lading, etc.) are per se null and void and of no force or effect.
+
+
+18
+
+
+
+
+
+18.17.	Binding Effect and Assignment. This MSA shall be binding upon the parties hereto, and their successors and assigns. Neither party may assign this MSA to any third party, without the prior written consent of the other party, which consent shall not be unreasonably withheld, conditioned or delayed, and any assignment in violation of this provision shall be void and of no effect. Notwithstanding the foregoing, no such prior written consent shall be required in the event of any sale of all or substantially all of the assets or the controlling interest of either party to a third party that is not a direct competitor of the other party, or in the event of any merger or acquisition of or by either party to an entity that is not a direct competitor of the other party, and in this event this MSA shall be binding upon any such successor.
+
+
+19.	LIST OF EXHIBITS
+
+
+Exhibit A Statement of Work for Telcel Project
+
+
+
+Exhibit B Statement of Works for AT&T Project
+
+
+
+Exhibit C Statement of Works for Verizon Project
+
+
+
+Exhibit D NDA
+
+
+
+IN WITNESS WHEREOF, the Parties have executed this MSA in duplicate through their duly authorized representatives:
+
+
+
+On behalf of	On behalf of
+
+Cloudminds (Hong Kong) Ltd. (Seal)	Borqs Hong Kong Limited (Seal)
+
+By:
+Name:
+Title:
+Date:
+
+
+19
