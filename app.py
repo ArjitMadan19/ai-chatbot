@@ -41,12 +41,15 @@ retriever = db.as_retriever(
 # -----------------------------
 # 4. Load local Hugging Face LLM
 # -----------------------------
+from transformers import pipeline
+
 pipe = pipeline(
-    "text2text-generation",
-    model="google/flan-t5-large",
-    max_new_tokens=512,
-    truncation=True,
-    do_sample=False
+    "text-generation",
+    model="Qwen/Qwen2.5-1.5B-Instruct",
+    max_new_tokens=300,
+    do_sample=False,
+    temperature=None,
+    return_full_text=False
 )
 
 llm = HuggingFacePipeline(pipeline=pipe)
@@ -56,16 +59,16 @@ llm = HuggingFacePipeline(pipeline=pipe)
 # 5. Prompt template
 # -----------------------------
 prompt_template = """
-You are a legal document assistant.
+You are a helpful legal document assistant.
 
-Your job is to summarize the provided contract context in plain English.
+Use the contract/document context to answer the user's question.
 
-Important rules:
-- Do not answer with only a section number.
-- Do not copy only headings.
-- Use the actual clause text from the context.
-- Give 3-5 clear bullet points.
-- If the context contains a section heading, explain the content under that heading.
+Rules:
+- Answer using only the provided context.
+- If this is a follow-up question, use the conversation history to understand what the user means.
+- Do not repeat the same sentence.
+- Do not make up facts.
+- Use 3-5 bullet points when helpful.
 - If the answer is not in the context, say: I do not know based on the provided documents.
 
 Context:
@@ -74,7 +77,7 @@ Context:
 Question:
 {question}
 
-Plain-English answer:
+Answer:
 """
 
 PROMPT = PromptTemplate(
@@ -159,7 +162,7 @@ Standalone question:
 
     rewritten = pipe(
         rewrite_prompt,
-        max_new_tokens=80,
+        max_new_tokens=250,
         truncation=True,
         do_sample=False
     )[0]["generated_text"].strip()
