@@ -4,6 +4,7 @@ from langchain.chains import RetrievalQA
 from langchain_community.llms import HuggingFacePipeline
 from langchain.prompts import PromptTemplate
 import numpy as np
+from sentence_transformers import CrossEncoder
 from transformers import pipeline
 
 ROUTE_EXAMPLES = {
@@ -52,15 +53,15 @@ db = FAISS.load_local(
     allow_dangerous_deserialization=True
 )
 
-
+reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
 # -----------------------------
 # 3. Retriever
 # -----------------------------
 retriever = db.as_retriever(
     search_type="mmr",
     search_kwargs={
-        "k": 3,
-        "fetch_k": 10
+        "k": 12,
+        "fetch_k": 20
     }
 )
 
@@ -300,92 +301,178 @@ def route_question():
     print("Selected route:", best_route)
 
     return best_route
+
+def rerank_documents(query, documents, top_n=3):
+    """
+    Reranks retrieved documents using a cross-encoder reranker.
+
+    FAISS gives candidate chunks.
+    The reranker scores each chunk against the query.
+    We return the top_n most relevant chunks.
+    """
+
+    if not documents:
+        return []
+
+    pairs = []
+
+    for doc in documents:
+        pairs.append((query, doc.page_content))
+
+    scores = reranker.predict(pairs)
+
+    scored_docs = list(zip(documents, scores))
+
+    scored_docs = sorted(
+        scored_docs,
+        key=lambda x: x[1],
+        reverse=True
+    )
+
+    reranked_docs = [doc for doc, score in scored_docs[:top_n]]
+
+    return reranked_docs
+
+def ask_rag(query):
+    """
+    Full RAG flow with reranking:
+    1. Retrieve candidate chunks from FAISS
+    2. Rerank chunks
+    3. Build context
+    4. Ask LLM
+    """
+
+    candidate_docs = retriever.get_relevant_documents(query)
+
+    reranked_docs = rerank_documents(
+        query,
+        documents=candidate_docs,
+        top_n=3
+    )
+
+    context = "\n\n".join(
+        doc.page_content for doc in reranked_docs
+    )
+
+    final_prompt = f"""
+You are a helpful document assistant.
+
+Use the context below to answer the question.
+
+Rules:
+- Answer only using the provided context.
+- Do not make up facts.
+- Use 3-5 bullet points when helpful.
+- If the answer is not in the context, say: I do not know based on the provided documents.
+
+Context:
+{context}
+
+Question:
+{query}
+
+Answer:
+"""
+
+    response = pipe(
+        final_prompt,
+        max_new_tokens=300,
+        do_sample=False,
+        truncation=True
+    )
+
+    answer = response[0]["generated_text"].strip()
+
+    return {
+        "result": answer,
+        "source_documents": reranked_docs
+    }
 # -----------------------------
 # 8. Chat loop
 # -----------------------------
-print("Multi-document chatbot with memory ready!")
-print("Type 'exit' to quit.")
-print("Type 'memory' to view conversation memory.")
-print("Type 'clear' to clear memory.\n")
+if __name__ == "__main__":
+    print("Multi-document chatbot with memory ready!")
+    print("Type 'exit' to quit.")
+    print("Type 'memory' to view conversation memory.")
+    print("Type 'clear' to clear memory.\n")
 
 
-while True:
-    query = input("You: ")
+    while True:
+        query = input("You: ")
 
-    if query.lower() in ["exit", "quit"]:
-        print("Goodbye!")
-        break
+        if query.lower() in ["exit", "quit"]:
+            print("Goodbye!")
+            break
 
-    if query.lower() == "memory":
-        print("\nConversation Memory:")
-        print(format_chat_history(chat_history))
-        print("\n" + "-" * 50 + "\n")
-        continue
+        if query.lower() == "memory":
+            print("\nConversation Memory:")
+            print(format_chat_history(chat_history))
+            print("\n" + "-" * 50 + "\n")
+            continue
 
-    if query.lower() == "clear":
-        chat_history.clear()
-        print("Memory cleared.\n")
-        continue
+        if query.lower() == "clear":
+            chat_history.clear()
+            print("Memory cleared.\n")
+            continue
 
-    route = route_question()
+        route = route_question()
 
-    if route == "memory_transform":
-        answer = answer_from_memory()
+        if route == "memory_transform":
+            answer = answer_from_memory()
 
-        print("\nAnswer:")
-        print(answer)
+            print("\nAnswer:")
+            print(answer)
 
-        add_to_memory(query, answer)
+            add_to_memory(query, answer)
 
-    elif route == "followup_retrieve":
-        question_for_rag = build_followup_rag_memory()
+        elif route == "followup_retrieve":
+            question_for_rag = build_followup_rag_memory()
 
-        print("\nQuestion sent to RAG:")
-        print(question_for_rag)
+            print("\nQuestion sent to RAG:")
+            print(question_for_rag)
 
-        result = qa.invoke({"query": question_for_rag})
+            result = ask_rag(question_for_rag)
 
-        answer = result["result"]
+            answer = result["result"]
 
-        print("\nAnswer:")
-        print(answer)
+            print("\nAnswer:")
+            print(answer)
 
-        print("\nSources:")
-        for doc in result["source_documents"]:
-            metadata = doc.metadata
-            print("-" * 40)
-            print("Title:", metadata.get("title"))
-            print("Type:", metadata.get("doc_type"))
-            print("File:", metadata.get("file_name"))
-            print("Chunk:", metadata.get("chunk_id"))
-            print("Path:", metadata.get("source"))
+            print("\nSources:")
+            for doc in result["source_documents"]:
+                metadata = doc.metadata
+                print("-" * 40)
+                print("Title:", metadata.get("title"))
+                print("Type:", metadata.get("doc_type"))
+                print("File:", metadata.get("file_name"))
+                print("Chunk:", metadata.get("chunk_id"))
+                print("Path:", metadata.get("source"))
 
-        add_to_memory(query, answer, result["source_documents"])
+            add_to_memory(query, answer, result["source_documents"])
 
-    elif route == "new_retrieve":
-        result = qa.invoke({"query": query})
+        elif route == "new_retrieve":
+            result = ask_rag(query)
+            answer = result["result"]
 
-        answer = result["result"]
+            print("\nAnswer:")
+            print(answer)
 
-        print("\nAnswer:")
-        print(answer)
+            print("\nSources:")
+            for doc in result["source_documents"]:
+                metadata = doc.metadata
+                print("-" * 40)
+                print("Title:", metadata.get("title"))
+                print("Type:", metadata.get("doc_type"))
+                print("File:", metadata.get("file_name"))
+                print("Chunk:", metadata.get("chunk_id"))
+                print("Path:", metadata.get("source"))
 
-        print("\nSources:")
-        for doc in result["source_documents"]:
-            metadata = doc.metadata
-            print("-" * 40)
-            print("Title:", metadata.get("title"))
-            print("Type:", metadata.get("doc_type"))
-            print("File:", metadata.get("file_name"))
-            print("Chunk:", metadata.get("chunk_id"))
-            print("Path:", metadata.get("source"))
+            add_to_memory(query, answer, result["source_documents"])
 
-        add_to_memory(query, answer, result["source_documents"])
+        else:
+            answer = "Got it."
 
-    else:
-        answer = "Got it."
+            print("\nAnswer:")
+            print(answer)
 
-        print("\nAnswer:")
-        print(answer)
-
-        add_to_memory(query, answer)
+            add_to_memory(query, answer)

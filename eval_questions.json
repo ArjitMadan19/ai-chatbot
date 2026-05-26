@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "question": "What does the agreement say about confidentiality?",
+    "expected_answer": "The receiving party must protect the disclosing party's confidential information with at least reasonable care, use it only within the scope of the agreement, and limit access to people who need it for agreement-related purposes.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 2,
+    "question": "What information is considered Confidential Information under the agreement?",
+    "expected_answer": "Confidential Information includes Customer Data, AppTech's platform, software, documentation, beta services, agreement terms, business and marketing plans, technical information, product plans, designs, pricing, and business processes.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 3,
+    "question": "When can a party disclose Confidential Information if legally required?",
+    "expected_answer": "A receiving party may disclose Confidential Information when compelled by law, but must provide prior written notice when legally permitted and reasonable assistance if the disclosing party wants to contest the disclosure.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 4,
+    "question": "Who owns Customer Data under the agreement?",
+    "expected_answer": "Customer owns and retains all right, title, and interest in Customer Data, while AppTech receives a limited license to access, use, process, store, copy, and create derivative works only to provide, maintain, and improve the services.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 5,
+    "question": "What does the agreement say about AppTech's use of Customer Data?",
+    "expected_answer": "AppTech may use Customer Data for the permitted purpose of providing, maintaining, and improving the AppTech Services, including improving data models, but Customer Data cannot be made available to other customers and Customer should not be identified in analytical results.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 6,
+    "question": "What are Customer's responsibilities when using the AppTech Services?",
+    "expected_answer": "Customer must comply with applicable laws, use the services only for permitted business purposes, ensure Customer Data is lawfully provided, prevent unauthorized access, and remain responsible for its users, clients, affiliates, and decisions made using the services.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 7,
+    "question": "What are the usage restrictions for Customer?",
+    "expected_answer": "Customer may not make the services available to unauthorized users, resell or sublicense them, build a competing product, reverse engineer or gain unauthorized access, introduce malicious code, provide Sensitive Personal Information, or use the services for unauthorized purposes.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 8,
+    "question": "What does the agreement say about termination for cause?",
+    "expected_answer": "Either party may terminate the agreement if the other party materially breaches it and fails to cure the breach within 30 days after receiving written notice. Termination is also allowed for bankruptcy, insolvency, liquidation, receivership, assignment for creditors, or similar financial events.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 9,
+    "question": "What is the limitation of liability in the agreement?",
+    "expected_answer": "Neither party is liable for indirect, special, incidental, consequential, or punitive damages. Aggregate liability is generally capped at amounts paid by Customer in the 12 months before the claim, except for indemnity obligations, gross negligence, willful misconduct, fraud, and Customer's payment obligations.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 10,
+    "question": "What is the acceptance testing process for deliverables?",
+    "expected_answer": "Customer may test deliverables against the applicable SOW. If no test period is specified, Customer has 15 days to test and must notify AppTech of rejection. AppTech then has 30 days, unless otherwise specified, to correct defects at no additional cost.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 11,
+    "question": "What phases are included in the Statement of Work?",
+    "expected_answer": "The SOW includes phases for high-level requirements, user stories, user interface design, coding/development, and commercial launch of the product.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 12,
+    "question": "What technical support does AppTech provide according to the agreement?",
+    "expected_answer": "AppTech provides Tier 3 technical support directly to its direct Customer for validated, replicable product, software, or platform bugs. Tier 1 and Tier 2 end-user support are Customer responsibilities.",
+    "expected_source_document": "contract_software_development.txt"
+  },
+  {
+    "id": 13,
+    "question": "What is the main idea of the Transformer architecture?",
+    "expected_answer": "The Transformer is a sequence transduction architecture based entirely on attention mechanisms, removing recurrence and convolution while using encoder and decoder stacks.",
+    "expected_source_document": "paper_attention_transformer.txt"
+  },
+  {
+    "id": 14,
+    "question": "Why does the Transformer use self-attention?",
+    "expected_answer": "Self-attention lets the model relate different positions in a sequence to each other so it can capture dependencies and build contextual representations of tokens.",
+    "expected_source_document": "paper_attention_transformer.txt"
+  },
+  {
+    "id": 15,
+    "question": "What is multi-head attention?",
+    "expected_answer": "Multi-head attention runs several attention operations in parallel so the model can attend to information from different representation subspaces and positions at the same time.",
+    "expected_source_document": "paper_attention_transformer.txt"
+  },
+  {
+    "id": 16,
+    "question": "Why are positional encodings needed in the Transformer?",
+    "expected_answer": "Because the Transformer does not use recurrence or convolution, positional encodings are added to token embeddings so the model has information about the order of tokens in the sequence.",
+    "expected_source_document": "paper_attention_transformer.txt"
+  },
+  {
+    "id": 17,
+    "question": "What is Retrieval-Augmented Generation?",
+    "expected_answer": "Retrieval-Augmented Generation combines a retriever that fetches relevant external documents with a generator that uses those documents as context to produce answers.",
+    "expected_source_document": "paper_bert.txt"
+  },
+  {
+    "id": 18,
+    "question": "Why is RAG useful for knowledge-intensive tasks?",
+    "expected_answer": "RAG is useful because it allows a model to use external retrieved knowledge instead of relying only on information stored in model parameters, improving factual grounding for knowledge-heavy questions.",
+    "expected_source_document": "paper_bert.txt"
+  }
+]

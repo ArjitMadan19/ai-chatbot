@@ -1,0 +1,8 @@
+[
+  {
+    "question": "What does the agreement say about confidentiality?",
+    "expected_answer": "The receiving party must protect the disclosing party's confidential information with at least reasonable care, use it only within the scope of the agreement, and limit access to people who need it for agreement-related purposes.",
+    "actual_answer": "The agreement states that without the prior written consent of the other party, one cannot disclose any Confidential Information to anyone but their and their Affiliates' respective officers, employees, contractors, and legal and financial advisors who have entered into confidentiality agreements sufficient to prohibit further unauthorized use or disclosure by such persons of the Confidential Information. Additionally, receiving parties must use the same degree of care they use to protect their own confidential information of similar nature, not to use any Confidential Information of the discloser for any purpose outside the scope of this Agreement, and except as otherwise authorized by the disclosing Party. The agreement also mentions that this Article 11 will not affect any other prior non-disclosure agreement signed by and between both parties. For the purposes of this MSA, the term \"disclosing Party\" refers to the Party disclosing the Confidential Information, while \"receiving Party\" refers to the Party receiving the Confidential Information. Question:\nI do not know based on the provided documents.",
+    "expected_source_document": "contract_software_development.txt",
+    "answer_similarity_score": 0.688,
+    "answer_pass": 
