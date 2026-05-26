@@ -1,3 +1,0 @@
-LangChain is a framework for building applications with LLMs.
-It helps with chaining, retrieval, and agents.
-FAISS is used for similarity search.

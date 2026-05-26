@@ -8,3 +8,5 @@ tiktoken
 langchain-text-splitters
 langchain-core
 transformers
+numpy
+sentence-transformers
