@@ -7,3 +7,4 @@ faiss_index/
 .DS_Store
 vectorstore/
 .idea/
+eval_results.json

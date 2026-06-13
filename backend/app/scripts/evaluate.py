@@ -2,7 +2,7 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from app import ask_rag
+from backend.app.rag.pipeline import ask_rag
 
 
 # -----------------------------
@@ -75,8 +75,9 @@ for index, item in enumerate(eval_questions, start=1):
     similarity_score = answer_similarity(actual_answer, expected_answer)
     source_pass = source_matches(source_documents, expected_source)
 
-    answer_pass = similarity_score >= ANSWER_THRESHOLD
-    overall_pass = answer_pass and source_pass
+    answer_pass = bool(similarity_score >= ANSWER_THRESHOLD)
+    source_pass = bool(source_pass)
+    overall_pass = bool(answer_pass and source_pass)
 
     if answer_pass:
         answer_pass_count += 1
