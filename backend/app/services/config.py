@@ -1,7 +1,7 @@
 import os
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Set
+from typing import Dict, List, Set
 
 from dotenv import load_dotenv
 
@@ -27,6 +27,19 @@ def get_bool_env(name, default):
     return value.lower() in {"1", "true", "yes", "on"}
 
 
+def get_list_env(name, default):
+    value = os.getenv(name)
+
+    if value is None:
+        return default
+
+    return [
+        item.strip()
+        for item in value.split(",")
+        if item.strip()
+    ]
+
+
 def normalize_database_url(database_url):
     if database_url.startswith("postgres://"):
         return database_url.replace("postgres://", "postgresql+psycopg://", 1)
@@ -45,6 +58,12 @@ class Settings:
         "API for asking questions across contracts, research papers, and notes."
     )
     app_version: str = os.getenv("APP_VERSION", "1.0.0")
+    cors_origins: List[str] = field(
+        default_factory=lambda: get_list_env(
+            "CORS_ORIGINS",
+            ["http://localhost:3000", "http://127.0.0.1:3000"]
+        )
+    )
     rate_limit: str = os.getenv("RATE_LIMIT", "10/minute")
     api_memory_turns: int = get_int_env("API_MEMORY_TURNS", 3)
     redis_url: str = os.getenv("REDIS_URL", "redis://localhost:6379/0")
@@ -70,7 +89,7 @@ class Settings:
         "cross-encoder/ms-marco-MiniLM-L-6-v2"
     )
     llm_model_name: str = os.getenv("LLM_MODEL_NAME", "Qwen/Qwen3-4B-Instruct-2507")
-    llm_max_new_tokens: int = get_int_env("LLM_MAX_NEW_TOKENS", 300)
+    llm_max_new_tokens: int = get_int_env("LLM_MAX_NEW_TOKENS", 600)
 
     chunk_size: int = get_int_env("CHUNK_SIZE", 400)
     chunk_overlap: int = get_int_env("CHUNK_OVERLAP", 50)

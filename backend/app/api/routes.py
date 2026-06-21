@@ -4,6 +4,7 @@ from typing import Literal, Optional
 from fastapi import APIRouter, BackgroundTasks, Depends, File, Form, HTTPException, Request, UploadFile
 from sqlalchemy.orm import Session
 
+from backend.app.rag.memory import select_conversation_history_for_query
 from backend.app.rag.pipeline import (
     LLMGenerationError,
     VectorStoreError,
@@ -71,10 +72,14 @@ def ask_question(
         }
         for message in recent_messages
     ]
+    effective_conversation_history = select_conversation_history_for_query(
+        question,
+        conversation_history
+    )
     cache_key = build_cache_key(
         question=question,
         doc_type_filter=ask_request.doc_type_filter,
-        conversation_history=conversation_history
+        conversation_history=effective_conversation_history
     )
     cached_response = get_cached_answer(cache_key)
 
@@ -98,7 +103,7 @@ def ask_question(
         result = ask_rag(
             query=question,
             doc_type_filter=ask_request.doc_type_filter,
-            conversation_history=conversation_history
+            conversation_history=effective_conversation_history
         )
     except VectorStoreError as error:
         raise HTTPException(status_code=503, detail=str(error))

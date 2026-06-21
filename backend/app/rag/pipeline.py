@@ -4,15 +4,30 @@ from threading import Lock
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.chains import RetrievalQA
-from langchain_community.llms import HuggingFacePipeline
-from langchain.prompts import PromptTemplate
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 import numpy as np
 from sentence_transformers import CrossEncoder
 from transformers import pipeline
 
+from backend.app.rag.memory import select_conversation_history_for_query
 from backend.app.services.config import settings
+
+
+FALLBACK_ANSWER = "I do not know based on the provided documents."
+SELF_CORRECTION_MARKERS = [
+    "\nWait,",
+    "\nWait.",
+    "\nI need to correct",
+    "\nCorrection:",
+    "\nActually,",
+    "\nLet me correct",
+    "Wait,",
+    "Wait.",
+    "I need to correct",
+    "Correction:",
+    "Actually,",
+    "Let me correct",
+]
 
 ROUTE_EXAMPLES = {
     "memory_transform": [
@@ -84,50 +99,6 @@ pipe = pipeline(
     max_new_tokens=settings.llm_max_new_tokens,
     do_sample=False,
     return_full_text=False
-)
-
-llm = HuggingFacePipeline(pipeline=pipe)
-
-
-# -----------------------------
-# 5. Prompt template
-# -----------------------------
-prompt_template = """
-You are a helpful legal document assistant.
-
-Use the contract/document context to answer the user's question.
-
-Rules:
-- Answer using only the provided context.
-- If this is a follow-up question, use the conversation history to understand what the user means.
-- Do not repeat the same sentence.
-- Do not make up facts.
-- Use 3-5 bullet points when helpful.
-- If the answer is not in the context, say: I do not know based on the provided documents.
-
-Context:
-{context}
-
-Question:
-{question}
-
-Answer:
-"""
-
-PROMPT = PromptTemplate(
-    template=prompt_template,
-    input_variables=["context", "question"]
-)
-
-
-# -----------------------------
-# 6. Retrieval QA chain
-# -----------------------------
-qa = RetrievalQA.from_chain_type(
-    llm=llm,
-    retriever=retriever,
-    return_source_documents=True,
-    chain_type_kwargs={"prompt": PROMPT}
 )
 
 
@@ -470,6 +441,79 @@ Current question:
 """
 
 
+def build_final_messages(query, context, conversation_context):
+    system_prompt = f"""
+You are a careful document-grounded assistant.
+
+Rules:
+- Return only the final answer. Do not include reasoning, analysis, draft text, or self-corrections.
+- Answer only using the document context.
+- Use the conversation history only to understand what the current question refers to.
+- If the document context does not contain the answer, respond exactly: {FALLBACK_ANSWER}
+- If the document context does contain the answer, do not include the fallback sentence.
+- Do not say "Wait", "I need to correct that", "Actually", or similar correction text.
+- Prefer 3-5 concise bullet points when the context supports multiple points.
+- Finish every sentence completely.
+""".strip()
+
+    user_prompt = f"""
+Conversation history:
+{conversation_context}
+
+Document context:
+{context}
+
+Current question:
+{query}
+""".strip()
+
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ]
+
+
+def render_generation_prompt(messages):
+    tokenizer = getattr(pipe, "tokenizer", None)
+
+    if tokenizer is not None and getattr(tokenizer, "chat_template", None):
+        try:
+            return tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=False
+            )
+        except TypeError:
+            return tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+
+    return "\n\n".join(
+        f"{message['role'].title()}:\n{message['content']}"
+        for message in messages
+    ) + "\n\nAssistant:\n"
+
+
+def clean_generated_answer(answer):
+    cleaned_answer = answer.strip()
+
+    for marker in SELF_CORRECTION_MARKERS:
+        marker_index = cleaned_answer.find(marker)
+
+        if marker_index != -1:
+            cleaned_answer = cleaned_answer[:marker_index].strip()
+
+    fallback_index = cleaned_answer.find(FALLBACK_ANSWER)
+
+    if fallback_index > 0:
+        cleaned_answer = cleaned_answer[:fallback_index].strip()
+
+    return cleaned_answer or FALLBACK_ANSWER
+
+
 def ask_rag(query, doc_type_filter=None, conversation_history=None):
     """
     Full RAG flow with reranking:
@@ -479,9 +523,14 @@ def ask_rag(query, doc_type_filter=None, conversation_history=None):
     4. Ask LLM
     """
 
+    effective_conversation_history = select_conversation_history_for_query(
+        query,
+        conversation_history
+    )
+
     retrieval_query = build_retrieval_query(
         query,
-        conversation_history=conversation_history
+        conversation_history=effective_conversation_history
     )
 
     candidate_docs = retrieve_documents(
@@ -495,34 +544,32 @@ def ask_rag(query, doc_type_filter=None, conversation_history=None):
         top_n=settings.rerank_top_n
     )
 
+    if not reranked_docs:
+        return {
+            "result": FALLBACK_ANSWER,
+            "source_documents": []
+        }
+
     context = "\n\n".join(
         doc.page_content for doc in reranked_docs
+    ).strip()
+
+    if not context:
+        return {
+            "result": FALLBACK_ANSWER,
+            "source_documents": []
+        }
+
+    conversation_context = format_api_conversation_history(
+        effective_conversation_history
     )
-    conversation_context = format_api_conversation_history(conversation_history)
-
-    final_prompt = f"""
-You are a helpful document assistant.
-
-Use the document context and conversation history below to answer the current question.
-
-Rules:
-- Answer only using the provided context.
-- Use the conversation history only to understand follow-up questions.
-- Do not make up facts.
-- Use 3-5 bullet points when helpful.
-- If the answer is not in the context, say: I do not know based on the provided documents.
-
-Conversation history:
-{conversation_context}
-
-Context:
-{context}
-
-Current question:
-{query}
-
-Answer:
-"""
+    final_prompt = render_generation_prompt(
+        build_final_messages(
+            query=query,
+            context=context,
+            conversation_context=conversation_context
+        )
+    )
 
     try:
         response = pipe(
@@ -535,7 +582,7 @@ Answer:
         raise LLMGenerationError("The language model failed to generate an answer.") from error
 
     try:
-        answer = response[0]["generated_text"].strip()
+        answer = clean_generated_answer(response[0]["generated_text"])
     except (IndexError, KeyError, TypeError) as error:
         raise LLMGenerationError("The language model returned an invalid response.") from error
 

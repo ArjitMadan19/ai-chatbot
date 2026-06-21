@@ -126,3 +126,67 @@ Open the interactive API docs at:
 ```text
 http://127.0.0.1:8000/docs
 ```
+
+## 🐳 Docker
+
+The application can also run with Docker Compose. This starts:
+- Next.js frontend
+- FastAPI backend
+- Postgres
+- Redis
+
+Build and start everything:
+```bash
+docker compose up --build
+```
+
+Run in the background:
+```bash
+docker compose up --build -d
+```
+
+Stop everything:
+```bash
+docker compose down
+```
+
+Stop everything and delete the Postgres volume:
+```bash
+docker compose down -v
+```
+
+The frontend will be available at:
+```text
+http://localhost:3000
+```
+
+The backend will be available at:
+```text
+http://127.0.0.1:8000
+```
+
+Swagger UI:
+```text
+http://127.0.0.1:8000/docs
+```
+
+Inside Docker Compose, the backend uses service names for internal networking:
+```bash
+DATABASE_URL=postgresql+psycopg://postgres:postgres@postgres:5432/ai_chatbot
+REDIS_URL=redis://redis:6379/0
+```
+
+The frontend's `NEXT_PUBLIC_API_URL` stays `http://localhost:8000` because API requests are made by your browser, outside Docker's internal network. If the backend is deployed elsewhere, set this variable before rebuilding the frontend image.
+
+The compose file mounts these folders so data survives backend container rebuilds:
+```text
+./docs:/app/docs
+./vectorstore:/app/vectorstore
+```
+
+It also stores downloaded Hugging Face models in a Docker volume:
+```text
+huggingface_cache:/app/.cache/huggingface
+```
+
+The first Docker startup can be slow because Python packages and local AI models may need to download.
