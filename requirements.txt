@@ -10,3 +10,11 @@ langchain-core
 transformers
 numpy
 sentence-transformers
+fastapi
+python-multipart
+pydantic
+sqlalchemy
+psycopg[binary]
+slowapi
+redis
+uvicorn

@@ -6,12 +6,14 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 
+from app.services.config import settings
+
 
 # -----------------------------
 # 1. Load all txt files
 # -----------------------------
 loader = DirectoryLoader(
-    "docs",
+    str(settings.docs_dir),
     glob="**/*.txt",
     loader_cls=TextLoader,
     loader_kwargs={
@@ -63,8 +65,8 @@ for doc in documents:
 # 3. Split documents into chunks
 # -----------------------------
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=400,
-    chunk_overlap=50
+    chunk_size=settings.chunk_size,
+    chunk_overlap=settings.chunk_overlap
 )
 
 docs = text_splitter.split_documents(documents)
@@ -83,7 +85,7 @@ for i, doc in enumerate(docs):
 # 5. Create embeddings
 # -----------------------------
 embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
+    model_name=settings.embedding_model_name
 )
 
 
@@ -96,6 +98,6 @@ db = FAISS.from_documents(docs, embeddings)
 # -----------------------------
 # 7. Save vector database
 # -----------------------------
-db.save_local("vectorstore")
+db.save_local(settings.vectorstore_dir)
 
 print("Vector database saved successfully!")

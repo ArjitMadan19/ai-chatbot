@@ -1,11 +1,33 @@
+from pathlib import Path
+from threading import Lock
+
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.chains import RetrievalQA
-from langchain_community.llms import HuggingFacePipeline
-from langchain.prompts import PromptTemplate
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 import numpy as np
 from sentence_transformers import CrossEncoder
 from transformers import pipeline
+
+from app.rag.memory import select_conversation_history_for_query
+from app.services.config import settings
+
+
+FALLBACK_ANSWER = "I do not know based on the provided documents."
+SELF_CORRECTION_MARKERS = [
+    "\nWait,",
+    "\nWait.",
+    "\nI need to correct",
+    "\nCorrection:",
+    "\nActually,",
+    "\nLet me correct",
+    "Wait,",
+    "Wait.",
+    "I need to correct",
+    "Correction:",
+    "Actually,",
+    "Let me correct",
+]
 
 ROUTE_EXAMPLES = {
     "memory_transform": [
@@ -40,7 +62,7 @@ ROUTE_EXAMPLES = {
 # 1. Load embeddings
 # -----------------------------
 embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
+    model_name=settings.embedding_model_name
 )
 
 
@@ -48,20 +70,21 @@ embeddings = HuggingFaceEmbeddings(
 # 2. Load FAISS vector database
 # -----------------------------
 db = FAISS.load_local(
-    "vectorstore",
+    settings.vectorstore_dir,
     embeddings,
-    allow_dangerous_deserialization=True
+    allow_dangerous_deserialization=settings.allow_dangerous_deserialization
 )
+vectorstore_write_lock = Lock()
 
-reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+reranker = CrossEncoder(settings.reranker_model_name)
 # -----------------------------
 # 3. Retriever
 # -----------------------------
 retriever = db.as_retriever(
     search_type="mmr",
     search_kwargs={
-        "k": 12,
-        "fetch_k": 20
+        "k": settings.retrieval_k,
+        "fetch_k": settings.retrieval_fetch_k
     }
 )
 
@@ -72,55 +95,10 @@ retriever = db.as_retriever(
 
 pipe = pipeline(
     "text-generation",
-    model="Qwen/Qwen2.5-1.5B-Instruct",
-    max_new_tokens=300,
+    model=settings.llm_model_name,
+    max_new_tokens=settings.llm_max_new_tokens,
     do_sample=False,
-    temperature=None,
     return_full_text=False
-)
-
-llm = HuggingFacePipeline(pipeline=pipe)
-
-
-# -----------------------------
-# 5. Prompt template
-# -----------------------------
-prompt_template = """
-You are a helpful legal document assistant.
-
-Use the contract/document context to answer the user's question.
-
-Rules:
-- Answer using only the provided context.
-- If this is a follow-up question, use the conversation history to understand what the user means.
-- Do not repeat the same sentence.
-- Do not make up facts.
-- Use 3-5 bullet points when helpful.
-- If the answer is not in the context, say: I do not know based on the provided documents.
-
-Context:
-{context}
-
-Question:
-{question}
-
-Answer:
-"""
-
-PROMPT = PromptTemplate(
-    template=prompt_template,
-    input_variables=["context", "question"]
-)
-
-
-# -----------------------------
-# 6. Retrieval QA chain
-# -----------------------------
-qa = RetrievalQA.from_chain_type(
-    llm=llm,
-    retriever=retriever,
-    return_source_documents=True,
-    chain_type_kwargs={"prompt": PROMPT}
 )
 
 
@@ -129,6 +107,84 @@ qa = RetrievalQA.from_chain_type(
 # -----------------------------
 chat_history = []
 MAX_MEMORY_TURNS = 3
+
+
+class DocumentLoadError(Exception):
+    pass
+
+
+class LLMGenerationError(Exception):
+    pass
+
+
+class VectorStoreError(Exception):
+    pass
+
+
+def clean_title(file_path):
+    filename = Path(file_path).stem
+    return filename.replace("_", " ").replace("-", " ").title()
+
+
+def load_document(file_path):
+    path = Path(file_path)
+
+    if path.suffix.lower() == ".txt":
+        loader = TextLoader(
+            str(path),
+            encoding="utf-8",
+            autodetect_encoding=True
+        )
+    elif path.suffix.lower() == ".pdf":
+        loader = PyPDFLoader(str(path))
+    else:
+        raise ValueError("Only .txt and .pdf uploads are supported.")
+
+    try:
+        return loader.load()
+    except Exception as error:
+        raise DocumentLoadError(f"Could not read document: {path.name}") from error
+
+
+def add_uploaded_document(file_path, doc_type):
+    """
+    Loads one uploaded document, adds metadata, indexes it in FAISS, and persists the vectorstore.
+    """
+
+    documents = load_document(file_path)
+    path = Path(file_path)
+
+    for doc in documents:
+        doc.metadata["doc_type"] = doc_type
+        doc.metadata["title"] = clean_title(path)
+        doc.metadata["file_name"] = path.name
+        doc.metadata["folder"] = path.parent.name
+        doc.metadata["source"] = str(path)
+
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=settings.chunk_size,
+        chunk_overlap=settings.chunk_overlap
+    )
+    chunks = text_splitter.split_documents(documents)
+
+    next_chunk_id = db.index.ntotal
+    for index, chunk in enumerate(chunks):
+        chunk.metadata["chunk_id"] = next_chunk_id + index
+
+    if chunks:
+        try:
+            with vectorstore_write_lock:
+                db.add_documents(chunks)
+                db.save_local(settings.vectorstore_dir)
+        except Exception as error:
+            raise VectorStoreError("Could not add document to the vector database.") from error
+
+    return {
+        "file_name": path.name,
+        "doc_type": doc_type,
+        "source": str(path),
+        "chunks_indexed": len(chunks)
+    }
 
 def answer_from_memory():
     """
@@ -333,7 +389,132 @@ def rerank_documents(query, documents, top_n=3):
 
     return reranked_docs
 
-def ask_rag(query):
+def retrieve_documents(query, doc_type_filter=None):
+    """
+    Retrieves candidate chunks from FAISS, optionally limited by document type.
+    """
+
+    search_kwargs = {
+        "k": settings.retrieval_k,
+        "fetch_k": settings.retrieval_fetch_k
+    }
+
+    if doc_type_filter:
+        search_kwargs["filter"] = {
+            "doc_type": doc_type_filter
+        }
+
+    try:
+        return db.max_marginal_relevance_search(
+            query,
+            **search_kwargs
+        )
+    except Exception as error:
+        raise VectorStoreError("Could not retrieve documents from the vector database.") from error
+
+
+def format_api_conversation_history(conversation_history=None):
+    if not conversation_history:
+        return "No previous conversation."
+
+    formatted_turns = []
+
+    for turn in conversation_history:
+        formatted_turns.append(f"User: {turn['question']}")
+        formatted_turns.append(f"Assistant: {turn['answer']}")
+
+    return "\n".join(formatted_turns)
+
+
+def build_retrieval_query(query, conversation_history=None):
+    if not conversation_history:
+        return query
+
+    recent_history = format_api_conversation_history(conversation_history)
+
+    return f"""
+Previous conversation:
+{recent_history}
+
+Current question:
+{query}
+"""
+
+
+def build_final_messages(query, context, conversation_context):
+    system_prompt = f"""
+You are a careful document-grounded assistant.
+
+Rules:
+- Return only the final answer. Do not include reasoning, analysis, draft text, or self-corrections.
+- Answer only using the document context.
+- Use the conversation history only to understand what the current question refers to.
+- If the document context does not contain the answer, respond exactly: {FALLBACK_ANSWER}
+- If the document context does contain the answer, do not include the fallback sentence.
+- Do not say "Wait", "I need to correct that", "Actually", or similar correction text.
+- Prefer 3-5 concise bullet points when the context supports multiple points.
+- Finish every sentence completely.
+""".strip()
+
+    user_prompt = f"""
+Conversation history:
+{conversation_context}
+
+Document context:
+{context}
+
+Current question:
+{query}
+""".strip()
+
+    return [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
+    ]
+
+
+def render_generation_prompt(messages):
+    tokenizer = getattr(pipe, "tokenizer", None)
+
+    if tokenizer is not None and getattr(tokenizer, "chat_template", None):
+        try:
+            return tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=False
+            )
+        except TypeError:
+            return tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+
+    return "\n\n".join(
+        f"{message['role'].title()}:\n{message['content']}"
+        for message in messages
+    ) + "\n\nAssistant:\n"
+
+
+def clean_generated_answer(answer):
+    cleaned_answer = answer.strip()
+
+    for marker in SELF_CORRECTION_MARKERS:
+        marker_index = cleaned_answer.find(marker)
+
+        if marker_index != -1:
+            cleaned_answer = cleaned_answer[:marker_index].strip()
+
+    fallback_index = cleaned_answer.find(FALLBACK_ANSWER)
+
+    if fallback_index > 0:
+        cleaned_answer = cleaned_answer[:fallback_index].strip()
+
+    return cleaned_answer or FALLBACK_ANSWER
+
+
+def ask_rag(query, doc_type_filter=None, conversation_history=None):
     """
     Full RAG flow with reranking:
     1. Retrieve candidate chunks from FAISS
@@ -342,46 +523,68 @@ def ask_rag(query):
     4. Ask LLM
     """
 
-    candidate_docs = retriever.get_relevant_documents(query)
+    effective_conversation_history = select_conversation_history_for_query(
+        query,
+        conversation_history
+    )
+
+    retrieval_query = build_retrieval_query(
+        query,
+        conversation_history=effective_conversation_history
+    )
+
+    candidate_docs = retrieve_documents(
+        retrieval_query,
+        doc_type_filter=doc_type_filter
+    )
 
     reranked_docs = rerank_documents(
-        query,
+        retrieval_query,
         documents=candidate_docs,
-        top_n=3
+        top_n=settings.rerank_top_n
     )
+
+    if not reranked_docs:
+        return {
+            "result": FALLBACK_ANSWER,
+            "source_documents": []
+        }
 
     context = "\n\n".join(
         doc.page_content for doc in reranked_docs
+    ).strip()
+
+    if not context:
+        return {
+            "result": FALLBACK_ANSWER,
+            "source_documents": []
+        }
+
+    conversation_context = format_api_conversation_history(
+        effective_conversation_history
+    )
+    final_prompt = render_generation_prompt(
+        build_final_messages(
+            query=query,
+            context=context,
+            conversation_context=conversation_context
+        )
     )
 
-    final_prompt = f"""
-You are a helpful document assistant.
+    try:
+        response = pipe(
+            final_prompt,
+            max_new_tokens=settings.llm_max_new_tokens,
+            do_sample=False,
+            truncation=True
+        )
+    except Exception as error:
+        raise LLMGenerationError("The language model failed to generate an answer.") from error
 
-Use the context below to answer the question.
-
-Rules:
-- Answer only using the provided context.
-- Do not make up facts.
-- Use 3-5 bullet points when helpful.
-- If the answer is not in the context, say: I do not know based on the provided documents.
-
-Context:
-{context}
-
-Question:
-{query}
-
-Answer:
-"""
-
-    response = pipe(
-        final_prompt,
-        max_new_tokens=300,
-        do_sample=False,
-        truncation=True
-    )
-
-    answer = response[0]["generated_text"].strip()
+    try:
+        answer = clean_generated_answer(response[0]["generated_text"])
+    except (IndexError, KeyError, TypeError) as error:
+        raise LLMGenerationError("The language model returned an invalid response.") from error
 
     return {
         "result": answer,
