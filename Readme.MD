@@ -17,17 +17,16 @@ An AI-powered chatbot that can answer questions from PDFs using Retrieval-Augmen
 
 ## ⚙️ Setup
 
-## Backend structure
+## Application structure
 ```text
-backend/
-  app/
-    api/       # FastAPI routes
-    rag/       # RAG pipeline, FAISS, reranking, LLM calls
-    services/  # config, database, Redis cache, upload/indexing helpers
-    schemas/   # Pydantic request/response models
-    scripts/   # ingestion and evaluation scripts
-    tests/     # backend tests
-    main.py    # FastAPI app factory and ASGI app
+app/
+  api/       # FastAPI routes
+  rag/       # RAG pipeline, FAISS, reranking, LLM calls
+  services/  # config, database, Redis cache, upload/indexing helpers
+  schemas/   # Pydantic request/response models
+  scripts/   # ingestion and evaluation scripts
+  tests/     # backend tests
+  main.py    # FastAPI app factory and ASGI app
 ```
 
 ### 1. Clone repo
@@ -43,7 +42,7 @@ pip install -r requirements.txt
 
 ### 3. Build the vector database
 ```bash
-python -m backend.app.scripts.ingest
+python -m app.scripts.ingest
 ```
 
 ### 4. Configure Postgres
@@ -88,7 +87,7 @@ REDIS_URL=redis://localhost:6379/0
 
 ### 6. Run the FastAPI server
 ```bash
-uvicorn backend.app.main:api --reload
+uvicorn app.main:api --reload
 ```
 
 ### 7. Ask a question
@@ -129,9 +128,8 @@ http://127.0.0.1:8000/docs
 
 ## 🐳 Docker
 
-The application can also run with Docker Compose. This starts:
-- Next.js frontend
-- FastAPI backend
+The backend can also run with Docker Compose. This starts:
+- FastAPI API
 - Postgres
 - Redis
 
@@ -155,11 +153,6 @@ Stop everything and delete the Postgres volume:
 docker compose down -v
 ```
 
-The frontend will be available at:
-```text
-http://localhost:3000
-```
-
 The backend will be available at:
 ```text
 http://127.0.0.1:8000
@@ -175,8 +168,6 @@ Inside Docker Compose, the backend uses service names for internal networking:
 DATABASE_URL=postgresql+psycopg://postgres:postgres@postgres:5432/ai_chatbot
 REDIS_URL=redis://redis:6379/0
 ```
-
-The frontend's `NEXT_PUBLIC_API_URL` stays `http://localhost:8000` because API requests are made by your browser, outside Docker's internal network. If the backend is deployed elsewhere, set this variable before rebuilding the frontend image.
 
 The compose file mounts these folders so data survives backend container rebuilds:
 ```text

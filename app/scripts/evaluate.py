@@ -2,7 +2,7 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from backend.app.rag.pipeline import ask_rag
+from app.rag.pipeline import ask_rag
 
 
 # -----------------------------

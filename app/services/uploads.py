@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from backend.app.services.config import settings
+from app.services.config import settings
 
 
 def get_upload_path(file_name: str, doc_type: str) -> Path:

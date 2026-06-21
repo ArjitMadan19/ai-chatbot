@@ -6,9 +6,9 @@ from slowapi.extension import _rate_limit_exceeded_handler
 from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
 
-from backend.app.api.routes import router
-from backend.app.services.config import settings
-from backend.app.services.database import init_db
+from app.api.routes import router
+from app.services.config import settings
+from app.services.database import init_db
 
 
 def create_app():

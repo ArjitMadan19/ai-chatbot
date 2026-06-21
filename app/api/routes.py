@@ -4,17 +4,17 @@ from typing import Literal, Optional
 from fastapi import APIRouter, BackgroundTasks, Depends, File, Form, HTTPException, Request, UploadFile
 from sqlalchemy.orm import Session
 
-from backend.app.rag.memory import select_conversation_history_for_query
-from backend.app.rag.pipeline import (
+from app.rag.memory import select_conversation_history_for_query
+from app.rag.pipeline import (
     LLMGenerationError,
     VectorStoreError,
     ask_rag
 )
-from backend.app.schemas.chat import AskRequest, AskResponse, ChatSessionResponse
-from backend.app.schemas.documents import DocumentResponse, UploadResponse
-from backend.app.services.cache import build_cache_key, get_cached_answer, set_cached_answer
-from backend.app.services.config import settings
-from backend.app.services.database import (
+from app.schemas.chat import AskRequest, AskResponse, ChatSessionResponse
+from app.schemas.documents import DocumentResponse, UploadResponse
+from app.services.cache import build_cache_key, get_cached_answer, set_cached_answer
+from app.services.config import settings
+from app.services.database import (
     create_chat_session,
     get_chat_session,
     get_document_record,
@@ -23,9 +23,9 @@ from backend.app.services.database import (
     save_chat_message,
     save_document_record
 )
-from backend.app.services.ingestion import index_uploaded_document
-from backend.app.services.serialization import serialize_sources
-from backend.app.services.uploads import get_upload_path
+from app.services.ingestion import index_uploaded_document
+from app.services.serialization import serialize_sources
+from app.services.uploads import get_upload_path
 
 
 router = APIRouter()

@@ -6,7 +6,7 @@ from typing import List, Optional
 from sqlalchemy import JSON, DateTime, ForeignKey, Integer, String, Text, create_engine, inspect, text
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, sessionmaker
 
-from backend.app.services.config import settings
+from app.services.config import settings
 
 
 engine = create_engine(settings.database_url)

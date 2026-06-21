@@ -4,7 +4,7 @@ import json
 from redis import Redis
 from redis.exceptions import RedisError
 
-from backend.app.services.config import settings
+from app.services.config import settings
 
 
 redis_client = None

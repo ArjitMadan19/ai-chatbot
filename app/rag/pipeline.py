@@ -9,8 +9,8 @@ import numpy as np
 from sentence_transformers import CrossEncoder
 from transformers import pipeline
 
-from backend.app.rag.memory import select_conversation_history_for_query
-from backend.app.services.config import settings
+from app.rag.memory import select_conversation_history_for_query
+from app.services.config import settings
 
 
 FALLBACK_ANSWER = "I do not know based on the provided documents."

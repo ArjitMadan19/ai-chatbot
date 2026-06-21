@@ -1,5 +1,5 @@
-from backend.app.rag.pipeline import DocumentLoadError, VectorStoreError, add_uploaded_document
-from backend.app.services.database import SessionLocal, update_document_record
+from app.rag.pipeline import DocumentLoadError, VectorStoreError, add_uploaded_document
+from app.services.database import SessionLocal, update_document_record
 
 
 def index_uploaded_document(document_id: int, file_path: str, doc_type: str):
